@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.bg-img-tour {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bg-img-cont {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-bottom: 50px;
+    background-image: url("../img/LR9.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-img {
+    width: 100%;
+    position: relative;
+}
+
+.tour-head {
+    width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.head-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.tourdate-heading {
+    text-align: center;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #030303,
+        1px -1px 0 #0a0a0a,
+        -1px 1px 0 #000000,
+        1px 1px 0 #070707;
+    font-size: 4vw;
+    margin-top: -30px;
+
+}
+
+ul {
+    background-color: #00000000;
+    text-align: center;
+    font-size: 30px;
+
+    li {
+        background-color: #00000000;
+        display: inline-block;
+        margin-right: 15px;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            .submenu {
+                height: 85px;
+            }
+
+            a {
+                color: #00f2ff;
+
+                &::before {
+                    visibility: visible;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+
+        .submenu {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            height: 0;
+            line-height: 40px;
+            box-sizing: border-box;
+            transition: height 0.3s ease-in-out;
+            transition-delay: 0s;
+
+            a {
+                color: #fff;
+                margin-top: 10px;
+                font-size: 18px;
+
+                &:hover {
+                    color: #00f2ff;
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        a {
+            color: #ffffff;
+            display: block;
+            padding: 0 7px 0 7px;
+            margin: 0 0 10px;
+            text-decoration: none !important;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                bottom: -10px;
+                left: 0px;
+                background-color: #00000000;
+                transition: all 0.2s ease-in-out;
+                transform: scale(0, 0);
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.bg-img-tour {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.bg-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    padding: 2rem;
+}
+
+.tour-dates {
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.tour-dates h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+}
+
+.date {
+    color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.date h3 {
+    margin: 0 0 0.5rem;
+    color: #cdf4ff;
+    text-shadow:
+        -1px -1px 0 #030303,
+        1px -1px 0 #0a0a0a,
+        -1px 1px 0 #000000,
+        1px 1px 0 #070707;
+}
+
+.date p {
+    margin: 0 0 0.5rem;
+}
+
+.date a {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    max-width: 200px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    background-color: #84d4f1;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.date a:hover {
+    background-color: #fd29eb;
+}
+
+#social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sm_icons {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+
+footer {
+    padding: 0 20px;
+}
+
+@media screen and (max-width:400px) {
+    tour-dates {
+        padding: 1rem;
+    }
+
+    .tour-dates h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        padding: 0.5rem;
+    }
+
+    .date h3 {
+        font-size: 1.5rem;
+    }
+
+    .date a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+}
