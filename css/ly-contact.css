@@ -4,6 +4,7 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 1em;
 
 
 }
@@ -18,15 +19,11 @@ body {
 
 .bg-img-cont {
     position: relative;
-    top: 0;
-    left: 0;
     max-width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     display: block;
     z-index: -1;
-    margin-bottom: 50px;
-    background-image: url("../img/LR9.jpg");
+    background-image: url("../img/contactpg.PNG");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,41 +39,118 @@ body {
 
 .header {
     width: 100%;
+    padding-bottom: 0rem;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 
 .logo-image {
     width: 70%;
     height: auto;
-    margin-bottom: -50px;
+}
 
+/*-- buttons --*/
+
+.call-us {
+    display: inline-block !important;
+    position: relative;
+    padding: 10px 20px !important;
+    background: linear-gradient(45deg, #0dbcf6, #990aff) !important;
+    color: #d8d8d8 !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
+    text-decoration: none !important;
+    font-size: 35px;
+    box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
+    /* Initial glow */
+}
+
+.call-us:hover {
+    background: linear-gradient(45deg #d27eff, #34e1ff) !important;
+    /* Same gradient for hover */
+    box-shadow: 0 0 20px rgba(246, 59, 230, 0.8), 0 0 30px rgba(6, 182, 212, 0.8);
+    /* Enhanced glow on hover */
+}
+
+.call-us:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 0 15px rgba(246, 59, 190, 0.5), 0 0 20px rgba(212, 6, 202, 0.5);
+    /* Reset glow on active */
+}
+
+.button-container1 {
+    margin-top: 10vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+/*-------------------*/
+
+.email-us {
+    display: inline-block !important;
+    position: relative;
+    padding: 10px 20px !important;
+    background: linear-gradient(45deg, #0dbcf6, #990aff) !important;
+    color: #d8d8d8 !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
+    text-decoration: none !important;
+    font-size: 35px;
+    box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
+    /* Initial glow */
+}
+
+.email-us:hover {
+    background: linear-gradient(45deg #d27eff, #34e1ff) !important;
+    /* Same gradient for hover */
+    box-shadow: 0 0 20px rgba(246, 59, 230, 0.8), 0 0 30px rgba(6, 182, 212, 0.8);
+    /* Enhanced glow on hover */
+}
+
+.email-us:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 0 15px rgba(246, 59, 190, 0.5), 0 0 20px rgba(212, 6, 202, 0.5);
+    /* Reset glow on active */
 }
 
 ul {
     text-align: center;
+    gap: 2em;
     background-color: transparent !important;
     padding: 0;
-    font-size: 30px;
+    font-size: 3em;
     text-shadow:
-        -1px -1px 0 #00f2ff,
-        1px -1px 0 #00f2ff,
-        -1px 1px 0 #00f2ff,
-        1px 1px 0 #00f2ff;
-    ;
+        -1px -1px 0 #484b4c,
+        1px -1px 0 #484b4c,
+        -1px 1px 0 #484b4c,
+        1px 1px 0 #484b4c;
+}
+
+/*---*/
+
+ul {
+    text-align: center;
+    font-size: 2em;
 
     li {
         display: inline-block;
-        margin-right: 15px;
         transition: all 0.4s ease-in-out;
-        background-color: transparent !important;
 
         &:hover {
             .submenu {
-                height: 105px;
+                height: 85px;
             }
 
             a {
-                background-color: transparent;
+                color: #00bfff;
 
                 &::before {
                     visibility: visible;
@@ -92,19 +166,18 @@ ul {
             width: 100%;
             background-color: transparent;
             height: 0;
-            line-height: 400px;
+            line-height: 0.3rem;
             box-sizing: border-box;
             transition: height 0.3s ease-in-out;
             transition-delay: 0s;
-            cursor: pointer;
 
             a {
                 color: #fff;
-                margin-top: 10px;
-                font-size: 18px;
+
+                font-size: 1.3rem;
 
                 &:hover {
-                    color: #fff;
+                    color: #00bfff;
                     text-decoration: none !important;
                 }
             }
@@ -114,7 +187,6 @@ ul {
             color: #ffffff;
             display: block;
             padding: 0 7px 0 7px;
-            margin: 0 0 10px;
             text-decoration: none !important;
             position: relative;
 
@@ -122,9 +194,6 @@ ul {
                 content: "";
                 position: absolute;
                 width: 100%;
-                height: 3px;
-                bottom: 10px;
-                left: 0px;
                 background-color: transparent;
                 transition: all 0.2s ease-in-out;
                 transform: scale(0, 0);
@@ -134,30 +203,10 @@ ul {
     }
 }
 
+/*---new navbar ---*/
 
-/* Set z-index to ensure the content scrolls over the background image */
-.content {
-    position: relative;
-    z-index: 1;
-}
 
-.form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    position: relative;
-    top: -70px;
-}
 
-.booking {
-    background-color: transparent;
-    padding: 20px 30px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: -60px
-}
 
 h1 {
     border: 8px;
@@ -173,59 +222,6 @@ h1 {
     width: 100%;
     position: relative;
     top: -70px;
-}
-
-.form-group {
-    margin-bottom: 5px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #000;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.submit {
-    display: inline-block !important;
-    position: relative;
-    padding: 10px 20px !important;
-    background: linear-gradient(45deg, #32b2e5, #9500ff) !important;
-    color: #d8d8d8 !important;
-    border-radius: 20px !important;
-    cursor: pointer !important;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
-    text-decoration: none !important;
-    font-size: 18px;
-    box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgba(200, 120, 240, 0.624);
-    /* Initial glow */
-}
-
-.submit:hover {
-    background: linear-gradient(45deg #3b82f6, #06b6d4) !important;
-    /* Same gradient for hover */
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(6, 182, 212, 0.8);
-    /* Enhanced glow on hover */
-}
-
-.submit:active {
-    transform: scale(0.95) !important;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 20px rgba(6, 182, 212, 0.5);
-    /* Reset glow on active */
 }
 
 .half-line {
@@ -250,19 +246,16 @@ textarea {
     align-items: center;
 }
 
-/* Style the background image */
 .bg-img {
     max-width: 100%;
     max-height: 100%;
 }
 
-/* Set z-index to ensure the content scrolls over the background image */
 .content {
     position: relative;
     z-index: 1;
 }
 
-/* Example content styles */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -270,45 +263,10 @@ textarea {
 
 }
 
-.contact {
-    text-align: center;
-    color: #fff;
-    font-size: 35px;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    margin-top: 100px;
-    padding-left: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
-    /* Adjust as needed */
-}
-
-.contact-bbf {
-    text-align: center;
-    color: #fff;
-    font-size: 35px;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .contact-card {
     font-family: Arial, sans-serif;
     padding: 20px;
-    max-width: 400px;
+    max-width: 100%;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -326,25 +284,6 @@ textarea {
     text-decoration: underline;
     color: rgb(198, 117, 255);
 }
-
-#social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sm_icons {
-    width: 30px;
-}
-
-
-
-
-
-/*----*/
-
-/*---*/
-
 
 #social-links {
     display: flex;
