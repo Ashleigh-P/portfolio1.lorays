@@ -1,0 +1,237 @@
+:root {
+    --ff-primary: Heebo, sans-serif;
+    --ff-secondary: Bungee, cursive;
+    --ff-accent: Bungee Shade, cursive;
+}
+
+/* Box styling rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ff-secondary);
+
+}
+
+/* Remove list styles on ul, ol elements */
+ul [role="list"],
+ol [role="list"] {
+    list-style: none;
+}
+
+/* set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/*set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements thath dont ahve a class */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* imherit fonts for inputs and button */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove all animations, transitions */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+
+    }
+}
+
+
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+
+body {
+    font-family: var (--ff-primary);
+    font-size: 1rem;
+    /*for demo only*/
+    padding: 2rem 0;
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav ul {
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.4 ease-in-out;
+}
+
+nav ul li a {
+    color: #ffffff;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none !important;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00f2ff;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    background-color: transparent;
+    /* Bottom border color */
+    transition: all 0.2s ease-in-out, visibility 0.2 ease-in-out;
+    transform: scaleX(0);
+    visibility: hidden;
+}
+
+nav ul li:hover a::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+.container {
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.stacked {
+    display: grid;
+}
+
+.stacked>* {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.product-grid {
+    display: grid;
+    gap: .125rem;
+    grid-template-columns:
+        repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+    aspect-ratio: 1 / 1.5;
+    /*border: 3px solid white;*/
+}
+
+.card__content {
+    background: #0687c79b;
+    color: #fff;
+    align-self: end;
+    margin: .5rem .5rem 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.card__title {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    /*color*/
+}
+
+.card__price {
+    font: size 1.5em;
+}
+
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1.25;
+    object-fit: cover;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+
+
+@media (min-width: 60em) {
+    .card__img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .card.featured {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .card.featured .card__img {
+        aspect-ratio: 1 / 1.17
+    }
+
+    .card.featured .card__title {
+        font-size: 1.75rem;
+    }
+}
