@@ -11,7 +11,7 @@ body {
 }
 
 .glow {
-    font-size: 2.5em;
+    font-size: 2rem;
     color: #fff;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
@@ -19,7 +19,7 @@ body {
 }
 
 .glow2 {
-    font-size: 2em;
+    font-size: 1.5rem;
     color: #fff;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
@@ -39,31 +39,33 @@ body {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+        text-shadow: 0 0 10px #2e89d8, 0 0 20px #00b7ff, 0 0 30px #53c6ed, 0 0 40px #2f86e2, 0 0 50px #193fd6, 0 0 60px #662be5, 0 0 70px #00b7ff;
     }
 
     to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+        text-shadow: 0 0 20px #5e61fe, 0 0 30px #00b7ff, 0 0 40px #00b7ff, 0 0 50px #00b7ff, 0 0 60px #00b7ff, 0 0 70px #00b7ff, 0 0 80px #00b7ff;
     }
 }
 
 pre {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     text-wrap: wrap;
 }
 
 .pre-pic1 img {
     float: left;
-    max-width: 150px;
+    max-width: 9.375rem;
 
 }
 
 .pre-pic2 img {
     float: right;
-    max-width: 150px;
-    padding-bottom: 20px;
-    padding: 5px;
+    max-width: 9.375rem;
+    padding-bottom: 1.25rem;
+    margin-left: 1.25rem;
+    padding-left: 1rem;
+
 }
 
 .AG {
@@ -118,7 +120,7 @@ pre {
 }
 
 p {
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -139,8 +141,10 @@ div {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: .125rem;
+    grid-template-columns:
+        repeat(auto-fit, minmax(15rem, 1fr));
 
 }
 
@@ -152,7 +156,7 @@ div {
 
 .image-wrapper img {
     display: block;
-    width: 325px;
+    width: 20.3rem;
     height: auto;
     transition: transform 0.3s, box-shadow 0.3s
 }
@@ -170,7 +174,7 @@ div {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 35px;
+    font-size: 2.18rem;
     font-weight: bold;
     text-align: center;
     text-shadow: 3px 3px 6px rgb(5, 243, 247);
@@ -178,7 +182,7 @@ div {
 
 ul {
     text-align: center;
-    font-size: 30px;
+    font-size: 1.8rem;
 
     li {
         display: inline-block;
@@ -259,10 +263,11 @@ ul {
     cursor: pointer !important;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
-    font-size: 35px;
+    font-size: 2.1rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
-    /* Initial glow */
+    top: -3.125rem;
 }
+
 
 .log-in:hover {
     background: linear-gradient(45deg #d27eff, #34e1ff) !important;
@@ -289,7 +294,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.3;
 }
 
 .sm_icons {
@@ -301,6 +306,29 @@ ul {
 
 footer {
     padding: 0 20px;
+}
+
+@media screen and (max-width: 320px) {
+    nav ul {
+        display: none;
+        /* Hide the regular navigation */
+    }
+
+    /* Style for the hamburger menu icon */
+    .menu-icon {
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 450px) {

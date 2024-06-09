@@ -25,8 +25,8 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url("../img/contact2.PNG");
-    background-size: cover;
+    background-image: url("../img/LR9.jpg");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -64,7 +64,7 @@ body {
 
 /*-- buttons --*/
 .button-container1 {
-    margin-top: 20rem;
+    margin-top: 19rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,4 +260,22 @@ ul {
     width: 2rem;
     height: auto;
     margin: 1rem;
+}
+
+@media (max-width: 320px) {
+
+    .call-us,
+    .email-us {
+        font-size: 25px;
+        padding: 8px 15px !important;
+    }
+
+    @media (max-width: 768px) {
+
+        .call-us,
+        .email-us {
+            font-size: 25px;
+            padding: 8px 15px !important;
+        }
+    }
 }
