@@ -184,6 +184,7 @@ nav ul li:hover a::before {
 
 .card__content {
     background: #0687c79b;
+    border-radius: 0.9rem;
     color: #fff;
     align-self: end;
     margin: .5rem .5rem 2rem;
@@ -191,14 +192,25 @@ nav ul li:hover a::before {
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
 }
 
+.card__content:hover {
+    transform: scale(1.05);
+}
+
 .card__title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 1.1;
     /*color*/
 }
 
+/*-- card link text decor ---*/
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .card__price {
-    font: size 1.5em;
+    font-size: 2rem;
 }
 
 
@@ -207,6 +219,7 @@ nav ul li:hover a::before {
     aspect-ratio: 1 / 1.25;
     object-fit: cover;
 }
+
 
 .logo {
     display: flex;
