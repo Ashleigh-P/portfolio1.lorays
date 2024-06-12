@@ -39,11 +39,11 @@ body {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #2e89d8, 0 0 20px #00b7ff, 0 0 30px #53c6ed, 0 0 40px #2f86e2, 0 0 50px #193fd6, 0 0 60px #662be5, 0 0 70px #00b7ff;
+        text-shadow: 0 0 10px #2e89d8, 0 0 20px #00b7ff, 0 0 30px #53c6ed, 0 0 40px #2f86e2, 0 0 50px;
     }
 
     to {
-        text-shadow: 0 0 20px #5e61fe, 0 0 30px #00b7ff, 0 0 40px #00b7ff, 0 0 50px #00b7ff, 0 0 60px #00b7ff, 0 0 70px #00b7ff, 0 0 80px #00b7ff;
+        text-shadow: 0 0 20px #5e61fe, 0 0 30px #00b7ff, 0 0 40px #00b7ff, 0 0 50px #00b7ff, 0 0 60px;
     }
 }
 
@@ -53,12 +53,14 @@ pre {
     text-wrap: wrap;
 }
 
+/*-- float pics left --*/
 .pre-pic1 img {
     float: left;
     max-width: 9.375rem;
 
 }
 
+/*-- float pics right --*/
 .pre-pic2 img {
     float: right;
     max-width: 9.375rem;
@@ -68,49 +70,18 @@ pre {
 
 }
 
-.AG1 {
+.AG {
     display: inline-block;
     text-decoration: none;
     color: rgb(216, 5, 205);
 
 }
 
-.AG1:hover {
+.AG:hover {
     color: rgb(5, 199, 243);
 }
 
-.AG2 {
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(216, 5, 205);
 
-}
-
-.AG2:hover {
-    color: rgb(5, 199, 243);
-}
-
-.AG3 {
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(216, 5, 205);
-
-}
-
-.AG3:hover {
-    color: rgb(5, 199, 243);
-}
-
-.AG4 {
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(216, 5, 205);
-
-}
-
-.AG4:hover {
-    color: rgb(5, 199, 243);
-}
 
 .biffy {
     text-decoration: none;
@@ -157,6 +128,26 @@ pre {
     text-decoration: none;
     color: rgb(216, 5, 205);
 
+}
+
+.AG,
+.biffy,
+.scott,
+.mur,
+.laura,
+.socialm {
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+    transition: color 0.3s ease;
+    /* Adjust the duration as needed */
+}
+
+.AG:hover,
+.biffy:hover,
+.scott:hover,
+.mur:hover,
+.laura:hover {
+    color: rgb(5, 199, 243);
 }
 
 .socialm:hover {
