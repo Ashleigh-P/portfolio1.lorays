@@ -29,10 +29,9 @@ body {
 }
 
 h1 {
-    color: rgba(255, 255, 255, 0.815);
-    font-family: genos;
-    font-size: 70px;
-    text-shadow: 4px 4px 8px hsl(181, 100%, 50%);
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-shadow: 4px 4px 8px hsl(184, 100%, 50%);
     display: flex;
     align-items: center;
     justify-content: center;
