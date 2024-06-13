@@ -8,40 +8,41 @@
     <title>About Us</title>
   </head>
 
-  <header class="header">
+  <hero class="hero">
     <img
       src="img/logo5.1-removebg-preview.png"
       alt="band logo"
-      class="header-image"
+      class="hero-image"
     />
-  </header>
+  </hero>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="ly-media.html">Media</a>
-        <ul class="submenu">
-          <li><a href="ly-media.html#music">Music</a></li>
-          <li><a href="ly-media.html#photos">Gallery</a></li>
-          <li><a href="ly-media.html#videos">Videos</a></li>
-          <li><a href="ly-media.html#shorts">Shorts</a></li>
+  <header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav class="nav" id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="ly-media.html">Media</a>
+                <ul class="submenu">
+                    <li><a href="ly-media.html#music">Music</a></li>
+                    <li><a href="ly-media.html#photos">Gallery</a></li>
+                    <li><a href="ly-media.html#videos">Videos</a></li>
+                    <li><a href="ly-media.html#shorts">Shorts</a></li>
+                </ul>
+            </li>
+            <li><a href="ly-tour.html">Tour</a></li>
+            <li><a href="ly-merch.html" target="_blank">Merch</a></li>
+            <li><a href="contact-socials.html">Socials</a></li>
+            <li><a href="ly-contact.html">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="ly-tour.html">Tour</a></li>
-      <li>
-        <a href="https://loraysmusic.bandcamp.com/merch" target="_blank"
-          >Merch</a
-        >
-      </li>
-      <li><a href="contact-socials.html">Socials</a></li>
-      <li><a href="ly-contact.html">Contact</a></li>
-    </ul>
-  </nav>
-<body>
-  <h1 class="glow">𝙇𝙤𝙜 𝙞𝙣 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡</h1>
-  <pre class="glow2">𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙗𝙖𝙘𝙠 𝙩𝙤 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙄𝘾𝘼</pre>
+    </nav>
+</header>
 
+
+
+
+  <body>
+  <h1 class="glow">Log In Successful</h1>
   <h2>Meet The Band</h2>
 
   <div class="container">
@@ -64,7 +65,7 @@
   </div>
   <main>
     <section class="intro">
-      <p>Lo Rays formed in 2018 when singer-songwriter <i><a href="https://www.instagram.com/lo.tkl/" class="laura">Laura </a></i> followed her
+      <p>Lo Rays formed in 2018 when singer-songwriter <i><a href="https://www.instagram.com/lo.tkl/" class="laura">Laura Takala </a></i> followed her
 dreams and moved from Finland to Glasgow to start a band and make music, inspired by her idols<i><a href="https://www.biffyclyro.com/" class="biffy"> Biffy Clyro</a></i>.
 Along the way, she met Ryan Jones (Bass), <i><a href="https://www.instagram.com/scottbathgatemusic/" class="scott">Scott Bathgate</a></i> (Guitar) and <i><a href="https://www.instagram.com/murray_plays_drums/" class="mur">Murray Bartle, </a></i>(Drums).<br>
  Together they have been creating a unique visual and auditory experience for fans with a genuinely one of a kind sound that blends glitchy synths, pop hooks, and metal riffs, Lo Rays ticks all the boxes of a captivating live band. Their massive cyber anthems are sure to stay in your head for
@@ -172,7 +173,7 @@ new material.</p>
         </a>
       </div>
     </footer>
-
+    <script src="js/ham-menu.js"></script>
  </body>
 </html>
 

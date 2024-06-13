@@ -10,36 +10,32 @@
   </head>
   <body>
     <a id="top"></a>
-    <div class="content">
-      <header class="header">
-        <img src="img/logo5.1.PNG" alt="band logo" class="header-image" />
-      </header>
+    <hero class="content">
+      <div class="hero">
+        <img src="img/logo5.1.PNG" alt="band logo" class="hero-image" />
+      </hero>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li></li>
-          <li><a href="ly-about.html">About</a></li>
-          <li></li>
-
-          <li><a href="ly-tour.html">Tour</a></li>
-          <li>
-            <a href="ly-merch.html">Merch</a
-            >
-          </li>
-
-          <li><a href="ly-contact.html">Contact</a></li>
-          <li>
-            <a href="ly-about.html">Media</a>
-            <ul class="submenu">
-              <li><a href="#music">Music</a></li>
-              <li><a href="#photos">Gallery</a></li>
-              <li><a href="#videos">Videos</a></li>
-              <li><a href="#shorts">Shorts</a></li>
+      <header>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <nav class="nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="ly-media.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="ly-media.html#music">Music</a></li>
+                        <li><a href="ly-media.html#photos">Gallery</a></li>
+                        <li><a href="ly-media.html#videos">Videos</a></li>
+                        <li><a href="ly-media.html#shorts">Shorts</a></li>
+                    </ul>
+                </li>
+                <li><a href="ly-tour.html">Tour</a></li>
+                <li><a href="ly-merch.html" target="_blank">Merch</a></li>
+                <li><a href="contact-socials.html">Socials</a></li>
+                <li><a href="ly-contact.html">Contact</a></li>
             </ul>
-          </li>
-        </ul>
-      </nav>
+        </nav>
+    </header>
 
       <hr class="half-line" />
       <strong><i><h3>Step into the world of LoRays, where post-apocalyptic pop meets glitchy synths, infectious pop hooks, and thunderous metal riffs. Explore their music, watch videos from the YouTube channel, and immerse yourself in the stunning visuals captured by incredibly talented photographers over the past couple of years!
@@ -419,7 +415,7 @@
 
       </div>
 
-      <script src="js/ly-media.js"></script>
+      <script src="js/ham-menu.js"></script>
       <script src="js/lightbox-plus-jquery.js"></script>
 
      

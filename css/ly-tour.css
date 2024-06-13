@@ -7,14 +7,18 @@ body {
 }
 
 header {
-    background-color: #333;
-    padding: 1rem 0;
     text-align: center;
+    position: relative;
+    width: 100%;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
 }
 
 .bg-img-container {
@@ -244,77 +248,165 @@ main {
 
 
 @media screen and (max-width:450px) {
+    .menu-btn {
+        display: block;
+    }
 
-    nav ul {
+    .nav {
         display: none;
-
-        .tour-dates {
-            padding: 1rem;
-        }
-
-        .tourdate-heading {
-            font-size: 1.5rem;
-        }
-
-        .tour-dates h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .date {
-            padding: 0.5rem;
-        }
-
-        .date h3 {
-            font-size: 1.5rem;
-        }
-
-        .date a {
-            padding: 0.3rem 0.6rem;
-            font-size: 0.8rem;
-        }
-
-        nav ul li {
-            font-size: 16px;
-        }
-
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
     }
 
-    @media screen and (max-width:320px) {
-
-        nav ul {
-            display: none;
-        }
-
-        .tourdate-heading {
-            font-size: 1.2rem;
-        }
-
-        .tour-dates {
-            padding: 1rem;
-        }
-
-        .tour-dates h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .date {
-            padding: 0.5rem;
-        }
-
-        .date h3 {
-            font-size: 1.5rem;
-        }
-
-        .date a {
-            padding: 0.3rem 0.6rem;
-            font-size: 0.8rem;
-        }
-
-        nav ul li {
-            font-size: 16px;
-        }
-
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: #f1f1f1;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+    }
+
+    .tour-dates {
+        padding: 1rem;
+    }
+
+    .tourdate-heading {
+        font-size: 1.5rem;
+    }
+
+    .tour-dates h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        padding: 0.5rem;
+    }
+
+    .date h3 {
+        font-size: 1.5rem;
+    }
+
+    .date a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+
+}
+
+@media screen and (max-width:320px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: #f1f1f1;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+    }
+
+    .tourdate-heading {
+        font-size: 1.2rem;
+    }
+
+    .tour-dates {
+        padding: 1rem;
+    }
+
+    .tour-dates h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        padding: 0.5rem;
+    }
+
+    .date h3 {
+        font-size: 1.5rem;
+    }
+
+    .date a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+
 }

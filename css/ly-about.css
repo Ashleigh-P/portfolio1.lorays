@@ -11,15 +11,8 @@ body {
 }
 
 .glow {
+    font-family: monospace;
     font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
-
-}
-
-.glow2 {
-    font-size: 1.5rem;
     color: #fff;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
@@ -166,14 +159,28 @@ div {
     justify-items: center;
 }
 
-.header {
+.hero {
     width: 100%;
     position: relative;
 }
 
-.header-image {
+.hero-image {
     width: 70%;
     height: auto;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
 }
 
 .container {
@@ -335,47 +342,126 @@ ul {
 }
 
 @media screen and (max-width: 320px) {
-    nav ul {
-        display: none;
-        /* Hide the regular navigation */
-    }
-
-    /* Style for the hamburger menu icon */
-    .menu-icon {
+    .menu-btn {
         display: block;
-        text-align: center;
-        cursor: pointer;
-        padding: 10px;
-        color: #ffffff;
     }
 
-    .content {
-        display: flex;
+    .nav {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: #f1f1f1;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
     }
 }
 
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @media screen and (max-width: 450px) {
-    nav ul {
-        display: none;
-        /* Hide the regular navigation */
-    }
-
-    /* Style for the hamburger menu icon */
-    .menu-icon {
+    .menu-btn {
         display: block;
-        text-align: center;
-        cursor: pointer;
-        padding: 10px;
-        color: #ffffff;
     }
 
-    .content {
-        display: flex;
+    .nav {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        background-color: transparent;
     }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: #f1f1f1;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+    }
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

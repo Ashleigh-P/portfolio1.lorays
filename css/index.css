@@ -379,7 +379,8 @@ footer {
     padding: 20px 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 470px) {
+
     nav ul {
         display: none;
         /* Hide the regular navigation */
@@ -404,6 +405,21 @@ footer {
         width: 20rem;
         /* Adjust width for tablets and small screens */
     }
+
+    #social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+    }
+
+    .sm_icons {
+        width: 1.3rem;
+        height: auto;
+        display: inline-block;
+        margin: 0.3rem;
+    }
+
 }
 
 @media (max-width: 768px) {

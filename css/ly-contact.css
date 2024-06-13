@@ -15,10 +15,6 @@ body {
     justify-content: center;
 }
 
-
-
-
-
 .bg-img-cont {
     position: absolute;
     overflow: hidden;
@@ -38,7 +34,7 @@ body {
     padding-top: 20%;
 }
 
-.header {
+.hero {
     width: 100%;
     position: relative;
     padding-bottom: 4rem;
@@ -61,6 +57,22 @@ body {
     align-items: flex-start;
     padding-top: 2rem;
 }
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
 
 /*-- buttons --*/
 .button-container1 {
@@ -262,20 +274,88 @@ ul {
     margin: 1rem;
 }
 
-@media (max-width: 320px) {
+
+@media screen and (max-width: 450px) {
 
     .call-us,
     .email-us {
-        font-size: 25px;
-        padding: 8px 15px !important;
+        font-size: 0.9rem;
+        padding: 4px 8px;
     }
 
-    @media (max-width: 768px) {
+    .button-container1 {
+        gap: 0.5rem;
+        margin-top: 6rem;
 
-        .call-us,
-        .email-us {
-            font-size: 25px;
-            padding: 8px 15px !important;
-        }
+    }
+
+    .sm_icons {
+        width: 1rem;
+        height: auto;
+        margin: 0.3rem;
+    }
+
+    #social-links {
+        margin-bottom: -1rem;
+
+    }
+
+    .menu-btn {
+        margin-top: 0.7rem;
+        display: block;
+    }
+
+    .nav {
+        font-size: .5rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .nav ul {
+        font-size: 1.5rem;
+
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        padding-top: 0;
+        display: flex;
+        color: white;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: transparent;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+        color: white;
     }
 }

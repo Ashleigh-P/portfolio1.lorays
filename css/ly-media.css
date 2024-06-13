@@ -3,18 +3,33 @@ body {
     margin: 20px;
 }
 
-.header {
+.hero {
     text-align: center;
     max-width: 100%;
     height: auto;
 }
 
-.header img {
+.hero img {
     display: block;
     text-align: center;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
 }
 
 
@@ -317,81 +332,121 @@ h5 {
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 470px) {
     body {
         margin: 10px 10px;
     }
 
-    nav ul {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
         display: none;
-        /* Hide the regular navigation */
-    }
-
-    /* Style for the hamburger menu icon */
-    .menu-icon {
-        display: block;
-        text-align: center;
-        cursor: pointer;
-        padding: 10px;
-        color: #ffffff;
-    }
-
-    .content {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .centered-vids {
         width: 100%;
-        max-width: 300px;
-        max-height: 200px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 15rem;
+        background-color: transparent;
     }
 
-    .centered-shorts {
+    .nav ul {
+        flex-direction: column;
         width: 100%;
-        max-width: 300px;
-        max-height: 200px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 2rem;
-        margin: 0 auto;
-        /* Add margin to ensure separation */
-    }
-
-    .image-container {
-        max-width: 400px;
-    }
-
-    /* Ensure grid containers have proper spacing */
-    .grid-vid-cont,
-    .grid-short-cont {
-        width: 50%;
-        margin: 0 auto;
         padding: 0;
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        /* Single column for mobile */
+        margin: 0;
+        list-style: none;
     }
 
-    .video-wrapper iframe {
-        height: 100px;
-    }
-
-    /* Clearfix to ensure sections are separated */
-    .clearfix::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    .top-button-container {
-        margin-top: 100rem;
+    .nav li {
         width: 100%;
     }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #fdfcfc;
+        text-align: center;
+    }
+
+    .nav.open {
+        background-color: transparent;
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: transparent;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered-vids {
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 15rem;
+}
+
+.centered-shorts {
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+    /* Add margin to ensure separation */
+}
+
+.image-container {
+    max-width: 400px;
+}
+
+/* Ensure grid containers have proper spacing */
+.grid-vid-cont,
+.grid-short-cont {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column for mobile */
+}
+
+.video-wrapper iframe {
+    height: 100px;
+}
+
+/* Clearfix to ensure sections are separated */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-button-container {
+    margin-top: 100rem;
+    width: 100%;
+
 }

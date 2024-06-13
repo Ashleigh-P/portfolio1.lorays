@@ -9,37 +9,38 @@
   </head>
   <body>
 
-    <header>
+    <hero>
    <div class="bg-img-cont">
       <div class="bg-logo">    
         <img src="img/logo5.1-removebg-preview1.png" alt="band logo" class="logo-image">
       </div>
     </div>
-  </header>
+  </hero>
   <br> <br>
 
-      <nav>
+  <header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav class="nav" id="nav-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <li><a href="ly-about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
             <li>
-    
-            <a href="ly-media.html">Media</a>
-            <ul class="submenu">
-              <li><a href="ly-media.html#music">Music</a></li>
-              <li><a href="ly-media.html#photos">Gallery</a></li>
-              <li><a href="ly-media.html#videos">Videos</a></li>
-              <li><a href="ly-media.html#shorts">Shorts</a></li>
-            </ul>
-          </li>
-          <li><a href="ly-tour.html">Tour</a></li>
-          <li>
-            <a href="ly-merch.html">Merch</a
-            >
-          </li>
+                <a href="ly-media.html">Media</a>
+                <ul class="submenu">
+                    <li><a href="ly-media.html#music">Music</a></li>
+                    <li><a href="ly-media.html#photos">Gallery</a></li>
+                    <li><a href="ly-media.html#videos">Videos</a></li>
+                    <li><a href="ly-media.html#shorts">Shorts</a></li>
+                </ul>
+            </li>
+            <li><a href="ly-tour.html">Tour</a></li>
+            <li><a href="ly-merch.html" target="_blank">Merch</a></li>
+            <li><a href="contact-socials.html">Socials</a></li>
+            <li><a href="ly-contact.html">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
+</header>
+
+
 
     <div class="button-container1">
       <button class="call-us" id="call"> <a href="+07925800271">Call Us</a></button>
@@ -49,15 +50,6 @@
     <br>
     <br>
 
-<!--<div class="contact-container">
-      <div class="contact-card">
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:loraysmusic@gmail.com">loraysmusic@gmail.com</a>
-      </p>
-      <p><strong>Phone:</strong> 07396 100454</p>
-    </div>
-    </div>-->
     <footer>
       <br>
       <div id="social-links">
@@ -87,10 +79,16 @@
         <a target="_blank" href="https://loraysmusic.bandcamp.com/">
           <img class="sm_icons" src="img/bc1.png" />
         </a>
+
+        
+        <a target="_blank" href="https://music.apple.com/us/artist/lo-rays/1403421699">
+          <img class="sm_icons" src="img/ap-it.png" />
+        </a>
       </div>
     
     </footer>
-    <script src="scripts.js"></script>
+    <script src="js/ham-menu.js"></script>
+
   </body>
 
   
