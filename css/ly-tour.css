@@ -326,6 +326,21 @@ main {
         font-size: 0.8rem;
     }
 
+    #social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sm_icons {
+        width: 1rem;
+        height: auto;
+        display: inline-block;
+    }
+
+
 
 }
 

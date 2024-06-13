@@ -331,7 +331,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3;
+    gap: 0.2;
 }
 
 .sm_icons {
@@ -340,69 +340,6 @@ ul {
     display: inline-block;
     margin: 10px;
 }
-
-@media screen and (max-width: 320px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    .nav li {
-        width: 100%;
-    }
-
-    .nav a {
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        color: #000;
-        text-align: center;
-    }
-
-    .nav.open {
-        display: flex;
-    }
-
-    .submenu {
-        display: none;
-    }
-
-    .nav li:hover .submenu {
-        display: block;
-    }
-
-    .submenu li {
-        background-color: #f1f1f1;
-    }
-
-    .submenu a {
-        padding: 8px 16px;
-        text-align: left;
-    }
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 
 @media screen and (max-width: 450px) {
     .menu-btn {
@@ -456,12 +393,38 @@ ul {
         padding: 8px 16px;
         text-align: left;
     }
-}
+
+    .button-container {
+        font-size: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5;
+        border-radius: 1.5rem;
+    }
+
+    .tourdates {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3;
+    }
+
+    .sm_icons {
+        width: 1.5rem;
+        height: auto;
+        display: inline-block;
+        margin: 10px;
+    }
 
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
