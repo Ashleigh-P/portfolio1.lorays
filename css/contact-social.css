@@ -3,11 +3,9 @@ body {
     background-color: black;
     font-size: 22px;
     color: rgb(255, 255, 255);
-    margin-bottom: 30px;
 }
 
 img {
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.051), rgba(0, 0, 0, 0.4));
     width: 60%;
 }
 
@@ -27,9 +25,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 8rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
 
+}
+
+.text-overlay {
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.051), rgba(0, 0, 0, 0.4));
 }
 
 body a {
@@ -41,21 +42,26 @@ body a {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 0;
 }
 
 .sm_icons {
-    width: 3rem;
+    width: 2rem;
     height: auto;
     margin: 1rem;
-    padding-top: 5rem;
+    padding-top: 0rem;
 
 }
+
+.sm_icons {
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.225), rgba(0, 0, 0, 0.565));
+}
+
 
 
 #text {
@@ -75,24 +81,18 @@ body a {
     }
 
     .sm_icons {
-        width: 30px;
+        width: 1.5rem;
+        margin: .5rem;
+
     }
 
-    @media (max-width: 320px) {
-        body {
-            font-size: 18px;
-        }
-
+    #social-links {
         #social-links {
-            gap: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
         }
 
-        .sm_icons {
-            width: 15px;
-        }
-
-        .text-overlay img {
-            font-size: 80%;
-        }
     }
 }
