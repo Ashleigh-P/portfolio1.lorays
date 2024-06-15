@@ -344,7 +344,7 @@ h5 {
 }
 
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 760px) {
     body {
         margin: 10px 10px;
     }
@@ -415,7 +415,7 @@ h5 {
         max-height: 200px;
         display: grid;
         place-items: center;
-        margin-bottom: 15rem;
+        margin-bottom: 35rem;
     }
 
     .centered-shorts {
@@ -424,7 +424,6 @@ h5 {
         max-height: 200px;
         display: grid;
         place-items: center;
-        margin-bottom: 2rem;
         margin: 0 auto;
         /* Add margin to ensure separation */
     }
@@ -432,7 +431,68 @@ h5 {
 
 
     /* Ensure grid containers have proper spacing */
-    .grid-vid-cont,
+
+    .grid-short-cont {
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Single column for mobile */
+    }
+
+    .grid-vid-cont {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        gap: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /* Clearfix to ensure sections are separated */
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .top-button-container {
+        margin-top: 120rem;
+        width: 100%;
+
+    }
+
+    @media screen and (max-width: 768px) {}
+
+    .centered-vids {
+        width: 100%;
+        max-width: 300px;
+        max-height: 200px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 35rem;
+    }
+
+    .centered-shorts {
+        width: 100%;
+        max-width: 300px;
+        max-height: 200px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 0rem;
+        margin: 0 auto;
+        /* Add margin to ensure separation */
+    }
+
+
+
+    /* Ensure grid containers have proper spacing */
+
     .grid-short-cont {
         width: 50%;
         margin: 0 auto;
@@ -443,9 +503,17 @@ h5 {
         /* Single column for mobile */
     }
 
-    .video-wrapper iframe {
-        height: 100px;
+    .grid-vid-cont {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        gap: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
     }
+
+
 
     /* Clearfix to ensure sections are separated */
     .clearfix::after {
