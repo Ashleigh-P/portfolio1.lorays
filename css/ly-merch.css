@@ -311,6 +311,23 @@ a {
     padding-bottom: 3rem;
 }
 
+#social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: auto;
+}
+
+.sm_icons {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+
+
 
 
 @media (min-width: 60em) {
