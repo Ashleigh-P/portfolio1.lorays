@@ -224,6 +224,25 @@ h5 {
     /* Reset glow on active */
 }
 
+.disclaimer-container {
+    font-family: monospace;
+    padding-top: 2rem;
+    font-size: 3rem;
+    color: white;
+}
+
+/*.disclaimer-container {
+    text-align: center;
+    color: #fff;
+    padding-top: 3rem;
+
+}
+
+.disclaimer-image {
+    max-width: 100%;
+    height: auto;
+}*/
+
 .button-container {
     margin-top: 10vh !important;
     display: flex;
@@ -323,10 +342,6 @@ h5 {
 .footer {
     text-align: center;
 }
-
-
-
-
 
 .transition {
     display: flex;
