@@ -39,31 +39,26 @@ ol [role="list"] {
     list-style: none;
 }
 
-/* set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
 }
 
-/*set core body defaults */
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }
 
-/* A elements thath dont ahve a class */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-/* make images easier to work with */
 img,
 picture {
     max-width: 100%;
     display: block;
 }
 
-/* imherit fonts for inputs and button */
 input,
 button,
 textarea,
@@ -184,7 +179,6 @@ ul {
 body {
     font-family: var (--ff-primary);
     font-size: 1rem;
-    /*for demo only*/
     padding: 2rem 0;
     background-color: rgb(0, 0, 0);
 }
@@ -391,6 +385,10 @@ a {
         padding: 8px 16px;
         text-align: left;
     }
+
+    .logo {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -446,5 +444,9 @@ a {
         padding: 8px 16px;
         text-align: left;
         color: white;
+    }
+
+    .logo {
+        padding: 0;
     }
 }
