@@ -1,4 +1,13 @@
+@font-face {
+    font-family: 'Mokoto';
+    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
 body {
+    font-family: monospace;
     background-color: rgb(0, 0, 0);
     margin: 20px;
 }
@@ -45,18 +54,20 @@ header {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-size: 3rem;
-    text-shadow: 4px 4px 8px hsl(184, 100%, 50%);
+    font-family: 'Mokoto', monospace;
+    font-size: 2.7rem;
+    text-shadow: 4px 4px 5px hsl(184, 100%, 50%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 h3 {
-    font-size: 25px;
+    font-family: 'Mokoto', monospace;
+    font-size: 1.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
-    text-shadow: 4px 4px 8px hsl(180, 94%, 51%);
+    text-shadow: 4px 4px 5px hsl(180, 94%, 51%);
 
 }
 
@@ -115,8 +126,9 @@ a:visited {
 /* -----------*/
 
 ul {
+    font-family: 'Mokoto', monospace;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.7rem;
 
     li {
         display: inline-block;
@@ -156,7 +168,7 @@ ul {
                 font-size: 18px;
 
                 &:hover {
-                    color: #fff;
+                    color: #00effc;
                     text-decoration: none !important;
                 }
             }
@@ -309,7 +321,9 @@ ul {
     cursor: pointer !important;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
-    font-size: 35px;
+    font-family: monospace;
+
+    font-size: 2rem;
     box-shadow: 0 0 15px rgba(196, 107, 255, 0.736), 0 0 20px rgb(78, 4, 115);
 
 }
