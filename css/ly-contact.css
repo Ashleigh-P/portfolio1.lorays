@@ -29,7 +29,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url("../img/LR6.jpg");
+    background-image: url("../img/lr6-edit.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -283,7 +283,7 @@ ul {
     #social-links {
         display: flex;
         justify-content: center;
-        margin-bottom: 19rem;
+        margin-bottom: 18rem;
         gap: 0.7rem;
 
     }
