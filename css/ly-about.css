@@ -379,7 +379,7 @@ ul {
 #subscribe-form {
     /* background: linear-gradient(to right, #8c5fff, #fe7bf5);*/
     background-image: url(../img/mlbg1.png);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 20px;
     font-size: 1.5rem;
     color: #ffffff;
@@ -400,15 +400,15 @@ ul {
     display: inline-block !important;
     position: relative;
     padding: 3px 6px !important;
-    background: linear-gradient(45deg, #0dbcf6, #990aff) !important;
-    color: #d8d8d8 !important;
+    background: linear-gradient(45deg, #838484, #ffffff) !important;
+    color: #040404 !important;
     border-radius: 20px !important;
     cursor: pointer !important;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
     font-family: monospace;
     font-size: 1.5rem;
-    margin-top: 7px;
+    margin-top: 0;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
 }
 
@@ -472,7 +472,7 @@ ul {
     }
 
     .submenu li {
-        background-color: #f1f1f1;
+        background-color: transparent;
     }
 
     .submenu a {
