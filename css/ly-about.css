@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Mokoto';
     src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
-    font-weight: lighter;
-    font-style: normal;
 }
 
 body {
@@ -16,8 +14,7 @@ body {
 
 h2 {
     font-family: 'Mokoto', monospace;
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 1.7rem;
 }
 
 .main {
@@ -108,6 +105,16 @@ i {
 }
 
 .biffy:hover {
+    color: rgb(5, 199, 243);
+}
+
+.vukovi {
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+
+}
+
+.vukovi:hover {
     color: rgb(5, 199, 243);
 }
 
@@ -368,6 +375,57 @@ ul {
     display: inline-block;
     margin: 10px;
 }
+
+#subscribe-form {
+    /* background: linear-gradient(to right, #8c5fff, #fe7bf5);*/
+    background-image: url(../img/mlbg1.png);
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subscribe-form label,
+#subscribe-form input {
+    margin-bottom: 15px;
+    width: 30%;
+
+}
+
+
+.submit {
+    display: inline-block !important;
+    position: relative;
+    padding: 3px 6px !important;
+    background: linear-gradient(45deg, #0dbcf6, #990aff) !important;
+    color: #d8d8d8 !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
+    text-decoration: none !important;
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-top: 7px;
+    box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
+}
+
+
+.submit:hover {
+    background: linear-gradient(45deg #d27eff, #34e1ff) !important;
+    /* Same gradient for hover */
+    box-shadow: 0 0 20px rgba(246, 59, 230, 0.8), 0 0 30px rgba(6, 182, 212, 0.8);
+    /* Enhanced glow on hover */
+}
+
+.submit:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 0 15px rgba(246, 59, 190, 0.5), 0 0 20px rgba(212, 6, 202, 0.5);
+    /* Reset glow on active */
+}
+
 
 @media screen and (max-width: 450px) {
     .menu-btn {

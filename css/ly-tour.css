@@ -303,7 +303,7 @@ main {
     }
 
     .submenu li {
-        background-color: #f1f1f1;
+        background-color: transparent;
     }
 
     .submenu a {

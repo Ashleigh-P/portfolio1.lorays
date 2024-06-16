@@ -360,8 +360,10 @@ h5 {
 
 @media screen and (max-width: 760px) {
     body {
+        text-align: center;
         margin: 10px 10px;
     }
+
 
     .menu-btn {
         display: block;
