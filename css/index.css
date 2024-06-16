@@ -15,6 +15,11 @@ body {
 
 }
 
+h2 {
+    font-family: 'Mokoto', monospace;
+    font-size: 1rem;
+}
+
 .new-collab {
     font-size: 50px;
     color: #5273B8;

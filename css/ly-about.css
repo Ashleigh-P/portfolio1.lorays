@@ -1,8 +1,23 @@
+@font-face {
+    font-family: 'Mokoto';
+    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
 body {
+    font-family: monospace;
+    font-weight: lighter;
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     margin: 20px 20px;
+}
+
+h2 {
+    font-family: 'Mokoto', monospace;
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 
 .main {
@@ -11,9 +26,9 @@ body {
 }
 
 .glow {
-    font-family: monospace;
-    font-size: 2rem;
-    color: #fff;
+    font-family: 'Mokoto';
+    font-size: 2.3rem;
+    color: #b4dbf3;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
 
@@ -36,7 +51,7 @@ body {
     }
 
     to {
-        text-shadow: 0 0 20px #5e61fe, 0 0 30px #00b7ff, 0 0 40px #00b7ff, 0 0 50px #00b7ff, 0 0 60px;
+        text-shadow: 0 0 20px #5e61fe, 0 0 30px #000000, 0 0 40px #00b7ff, 0 0 50px #00b7ff, 0 0 60px;
     }
 }
 
@@ -60,6 +75,16 @@ pre {
     padding-bottom: 1.25rem;
     margin-left: 1.25rem;
     padding-left: 1rem;
+
+}
+
+strong {
+    font-family: 'Mokoto', monospace;
+}
+
+i {
+    font-family: monospace;
+    font-weight: lighter;
 
 }
 
@@ -149,6 +174,7 @@ pre {
 
 
 p {
+    font-family: monospace;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -192,6 +218,7 @@ header {
 }
 
 .image-wrapper {
+    font-family: 'Mokoto', monospace;
     position: relative;
     margin: 4px;
     overflow: hidden;
@@ -210,8 +237,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2.18rem;
-    font-weight: bold;
+    font-size: 1.5rem;
     text-align: center;
     text-shadow: 3px 3px 6px rgb(5, 243, 247);
 }
@@ -299,6 +325,7 @@ ul {
     cursor: pointer !important;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
+    font-family: monospace;
     font-size: 2.1rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
 }
