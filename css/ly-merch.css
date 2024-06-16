@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Mokoto';
+    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
 :root {
     --ff-primary: Heebo, ;
     --ff-secondary: Bungee, cursive;
@@ -44,6 +51,7 @@ html:focus-within {
 }
 
 body {
+    font-family: monospace;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -83,8 +91,9 @@ header {
 
 
 ul {
+    font-family: 'Mokoto', monospace;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 
     li {
         display: inline-block;
@@ -280,8 +289,9 @@ nav ul li:hover a::before {
 }
 
 .card__title {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.25rem;
+    font-family: 'Mokoto', monospace;
+    font-weight: lighter;
+    font-size: 1.2rem;
     line-height: 1.1;
     /*color*/
 }
