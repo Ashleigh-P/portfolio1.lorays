@@ -243,8 +243,9 @@ header {
 }
 
 ul {
+    font-family: 'Mokoto', monospace;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
     li {
         display: inline-block;

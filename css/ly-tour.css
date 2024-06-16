@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Mokoto';
+    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Mokoto', monospace;
     margin: 0;
     padding: 0;
     background-color: #000000;
@@ -224,6 +231,8 @@ main {
     text-shadow: 2px 2px #000000;
     background-color: #84d4f1;
     border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
 }
