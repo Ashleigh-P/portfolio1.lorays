@@ -58,6 +58,7 @@ h2 {
 .header {
     width: 100%;
     position: relative;
+
 }
 
 .header-image {
@@ -92,7 +93,6 @@ h2 {
 .scroll-down-arrow {
     position: absolute;
     bottom: 20px;
-    /* Adjust this value to position the arrow vertically */
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -104,11 +104,11 @@ h2 {
 
 .video-overlay-img {
     position: absolute;
-    top: 5%;
+    top: -4%;
     left: 30% translate(-50%, -50%);
 }
 
-nav {
+/*nav {
     background-color: transparent;
     padding-left: 20px;
     padding-right: 20px;
@@ -152,7 +152,6 @@ nav ul li a::before {
     bottom: -10px;
     left: 0;
     background-color: transparent;
-    /* Bottom border color */
     transition: all 0.2s ease-in-out, visibility 0.2 ease-in-out;
     transform: scaleX(0);
     visibility: hidden;
@@ -161,7 +160,7 @@ nav ul li a::before {
 nav ul li:hover a::before {
     visibility: visible;
     transform: scaleX(1);
-}
+}*/
 
 
 .video-overlay-img img {
