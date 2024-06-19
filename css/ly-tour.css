@@ -299,7 +299,7 @@ main {
     }
 
     .nav li:hover .submenu {
-        display: block;
+        display: none;
     }
 
     .submenu li {

@@ -401,7 +401,7 @@ a {
     }
 
     .nav li:hover .submenu {
-        display: block;
+        display: none;
     }
 
     .submenu li {
@@ -460,7 +460,7 @@ a {
     }
 
     .nav li:hover .submenu {
-        display: block;
+        display: none;
     }
 
     .submenu li {
