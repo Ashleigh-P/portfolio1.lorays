@@ -10,3 +10,4 @@ document.getElementById('transitionButton').addEventListener('click', function()
       window.location.href = 'ly-about.html'; 
     };
 })
+
