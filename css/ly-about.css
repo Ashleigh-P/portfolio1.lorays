@@ -376,27 +376,56 @@ ul {
     margin: 10px;
 }
 
-#subscribe-form {
-    /* background: linear-gradient(to right, #8c5fff, #fe7bf5);*/
-    background-image: url(../img/mlbg1.png);
+.mail-list {
+    /*-- logo  --*/
+    width: 20rem;
+}
+
+#mailing-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     border-radius: 20px;
-    font-size: 1.5rem;
     color: #ffffff;
+}
+
+#subscribe-form {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 
-#subscribe-form label,
+#subscribe-form h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#subscribe-form p {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#subscribe-form label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
 #subscribe-form input {
-    margin-bottom: 15px;
-    width: 30%;
-
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
-
 
 .submit {
+
     display: inline-block !important;
     position: relative;
     padding: 3px 6px !important;
@@ -407,8 +436,9 @@ ul {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
     font-family: monospace;
-    font-size: 1.5rem;
-    margin-top: 0;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
 }
 
