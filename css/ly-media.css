@@ -362,7 +362,28 @@ h5 {
     body {
         text-align: center;
         margin: 10px 10px;
+    } 
+    strong, i, h3{
+        font-size: 1rem;
     }
+    h1{
+        font-size: 1.7rem;
+        text-wrap: wrap;
+    }
+    #social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3;
+    }
+    
+    .sm_icons {
+        width: 1.5rem;
+        height: auto;
+        display: inline-block;
+        margin: 0.3rem;
+    }
+    
 
 
     .menu-btn {
@@ -441,13 +462,7 @@ h5 {
         display: grid;
         place-items: center;
         margin: 0 auto;
-        /* Add margin to ensure separation */
     }
-
-
-
-    /* Ensure grid containers have proper spacing */
-
     .grid-short-cont {
         width: 50%;
         margin: 0 auto;
@@ -467,10 +482,6 @@ h5 {
         display: grid;
         grid-template-columns: 1fr;
     }
-
-
-
-    /* Clearfix to ensure sections are separated */
     .clearfix::after {
         content: "";
         display: block;
