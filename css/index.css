@@ -21,7 +21,7 @@ h2 {
 }
 
 .new-collab {
-    font-size: 50px;
+    font-size: 3rem;
     color: #5273B8;
     text-align: center;
     text-shadow:
@@ -391,10 +391,16 @@ footer {
         width: 20rem;
         /* Adjust width for tablets and small screens */
     }
+    .new-collab {
+        font-size: 2rem;
+        text-align: center;
+    
+    }
+
 
     .video-overlay-img {
         position: absolute;
-        margin-top: 4rem !important;
+        margin-top: 2rem !important;
         left: 30% translate(-50%, -50%);
     }
 
