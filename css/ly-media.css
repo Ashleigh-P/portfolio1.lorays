@@ -521,12 +521,7 @@ h5 {
         place-items: center;
         margin-bottom: 0rem;
         margin: 0 auto;
-        /* Add margin to ensure separation */
     }
-
-
-
-    /* Ensure grid containers have proper spacing */
 
     .grid-short-cont {
         width: 50%;
@@ -535,7 +530,6 @@ h5 {
         gap: 1rem;
         display: grid;
         grid-template-columns: 1fr;
-        /* Single column for mobile */
     }
 
     .grid-vid-cont {
@@ -548,9 +542,6 @@ h5 {
         grid-template-columns: 1fr;
     }
 
-
-
-    /* Clearfix to ensure sections are separated */
     .clearfix::after {
         content: "";
         display: block;
