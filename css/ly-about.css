@@ -477,111 +477,113 @@ ul {
         letter-spacing: 0.2rem;
         text-align: center;
         margin-top: 2rem;
-    
 
+
+    }
+
+    .mail-list {
+        width: 15rem;
+    }
+
+    p {
+        font-family: monospace;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    strong,
+    h2 i {
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: monospace;
+
+
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        font-size: 1rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        background-color: transparent;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+    }
+
+    .button-container {
+        font-size: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5;
+        border-radius: 1.5rem;
+    }
+
+    .tourdates {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3;
+    }
+
+    .sm_icons {
+        width: 1.5rem;
+        height: auto;
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
-
-.mail-list {
-    width: 15rem;
-}
-
-p {
-    font-family: monospace;
-    font-size: 1rem;
-    text-align: center;
-}
-
-strong,
-h2 i {
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: monospace;
-
-
-}
-
-.menu-btn {
-    display: block;
-}
-
-.nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: transparent;
-}
-
-.nav ul {
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.nav li {
-    width: 100%;
-}
-
-.nav a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #ffffff;
-    text-align: center;
-}
-
-.nav.open {
-    display: flex;
-}
-
-.submenu {
-    display: none;
-}
-
-.nav li:hover .submenu {
-    display: block;
-}
-
-.submenu li {
-    background-color: transparent;
-}
-
-.submenu a {
-    padding: 8px 16px;
-    text-align: left;
-}
-
-.button-container {
-    font-size: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5;
-    border-radius: 1.5rem;
-}
-
-.tourdates {
-    font-size: 1rem;
-    padding: 10px 20px;
-}
-
-#social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3;
-}
-
-.sm_icons {
-    width: 1.5rem;
-    height: auto;
-    display: inline-block;
-    margin: 10px;
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}}

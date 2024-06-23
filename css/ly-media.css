@@ -362,28 +362,33 @@ h5 {
     body {
         text-align: center;
         margin: 10px 10px;
-    } 
-    strong, i, h3{
+    }
+
+    strong,
+    i,
+    h3 {
         font-size: 1rem;
     }
-    h1{
+
+    h1 {
         font-size: 1.7rem;
         text-wrap: wrap;
     }
+
     #social-links {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.3;
     }
-    
+
     .sm_icons {
         width: 1.5rem;
         height: auto;
         display: inline-block;
         margin: 0.3rem;
     }
-    
+
 
 
     .menu-btn {
@@ -399,6 +404,7 @@ h5 {
 
     .nav ul {
         flex-direction: column;
+        font-size: 1rem;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -463,6 +469,7 @@ h5 {
         place-items: center;
         margin: 0 auto;
     }
+
     .grid-short-cont {
         width: 50%;
         margin: 0 auto;
@@ -482,6 +489,7 @@ h5 {
         display: grid;
         grid-template-columns: 1fr;
     }
+
     .clearfix::after {
         content: "";
         display: block;
