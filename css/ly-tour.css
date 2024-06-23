@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Mokoto', monospace;
+    font-family: monospace;
     margin: 0;
     padding: 0;
     background-color: #000000;
@@ -187,6 +187,16 @@ main {
     max-width: 800px;
 }
 
+.tour-dates h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tour-dates p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .tour-dates h2 {
     text-align: center;
     font-size: 3rem;
@@ -223,7 +233,7 @@ main {
 .date a {
     display: block;
     margin: 0 auto;
-    width: 100px;
+    width: 150px;
     max-width: 200px;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
