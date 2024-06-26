@@ -21,7 +21,6 @@ h2 {
 }
 
 .freak {
-    margin: 0;
     font-size: 5rem;
     background: linear-gradient(to bottom, #000, #980909);
     -webkit-background-clip: text;
