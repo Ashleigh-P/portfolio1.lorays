@@ -34,7 +34,7 @@ h2 {
 }
 
 .freak::before {
-    content: "freak";
+    content: "FREAK";
     position: absolute;
     top: 0;
     left: 0;
