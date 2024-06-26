@@ -22,8 +22,18 @@ h2 {
     padding-right: 20px;
 }
 
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+
 .glow {
-    font-family: 'Mokoto';
+    font-family: 'Mokoto', monospace;
     font-size: 2.3rem;
     color: #b4dbf3;
     text-align: center;
@@ -55,23 +65,22 @@ h2 {
 pre {
     font-size: 1.25rem;
     text-align: center;
-    text-wrap: wrap;
+    white-space: normal;
 }
 
 /*-- float pics left --*/
 .pre-pic1 img {
     float: left;
     max-width: 9.375rem;
-
+    margin-right: 1rem;
 }
 
 /*-- float pics right --*/
 .pre-pic2 img {
     float: right;
     max-width: 9.375rem;
-    padding-bottom: 1.25rem;
     margin-left: 1.25rem;
-    padding-left: 1rem;
+    margin-bottom: 1.25rem;
 
 }
 
