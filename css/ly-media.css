@@ -104,25 +104,6 @@ p {
     width: 100%;
 }
 
-/*--- for <a> links ---*/
-a:link {
-    color: rgb(255, 255, 255);
-}
-
-a:hover {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-}
-
-a:active {
-    font-size: 20px;
-    color: aqua;
-}
-
-a:visited {
-    color: white
-}
-
 /* -----------*/
 
 ul {
@@ -201,12 +182,12 @@ ul {
 
 
 .image-container {
-    width: 85%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 8%;
+    padding: -.25rem -.25rem;
 }
 
 .gallery {
@@ -217,9 +198,41 @@ ul {
 
 .gallery img {
     width: 100%;
-    border: 3px solid;
+    border: 3px solid white;
     border-radius: 20px;
 }
+
+figure {
+    margin: .5rem;
+}
+
+.lucy {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+}
+
+.lucy:hover {
+    text-decoration: none;
+    color: #5fcfff;
+}
+
+figcaption {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    text-align: center;
+}
+
+figcaption:hover {
+    transform: none;
+    transition: none;
+
+
+}
+
 
 .gallery img:hover {
     border-color: rgb(151, 40, 255);
