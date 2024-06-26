@@ -20,8 +20,96 @@ h2 {
     font-size: 1rem;
 }
 
-.new-collab {
+.freak {
+    margin: 0;
+    font-size: 5rem;
+    background: linear-gradient(to bottom, #000, #980909);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.freak::before {
+    content: "freak";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    z-index: -1;
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+}
+
+h3 {
     font-size: 3rem;
+    background: linear-gradient(to bottom, #000, #980909);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+h3::before {
+    content: "new single";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    z-index: -1;
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+}
+
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #000, #980909);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    display: block;
+
+}
+
+p::before {
+    content: "out 5th july!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    z-index: -1;
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #fff;
+}
+
+.new-collab {
+    font-size: 2.5rem;
     color: #5273B8;
     text-align: center;
     text-shadow:
@@ -29,6 +117,29 @@ h2 {
         1px -1px 0 #ffffff,
         -1px 1px 0 #ffffff,
         1px 1px 0 #ffffff;
+}
+
+.freak-img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px #980909cc;
+}
+
+.freak-img-cont img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.freak-img-cont:hover img {
+    transform: scale(1.05);
 }
 
 .new-collab-img-cont {
@@ -269,31 +380,35 @@ h5 {
 
 }
 
-/* Define animation for glowing effect */
+.freak-half-line {
+    border: 0;
+    height: 3px;
+    background-color: #333;
+    background: linear-gradient(to right, #707273, #980909);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 @keyframes glowing {
     0% {
         box-shadow: 0 0 10px rgba(84, 224, 255, 0.784);
         border-color: rgba(0, 217, 255, 0.736);
-        /* Initial glow */
     }
 
     50% {
         box-shadow: 0 0 20px rgba(174, 0, 255, 0.8);
         border-color: #06b5d400
-            /* Increased glow */
     }
 
     100% {
         box-shadow: 0 0 20px rgba(183, 50, 255, 0.584);
         border-color: rgba(107, 233, 255, 0.527);
-        /* Return to initial glow */
     }
 }
 
-/* Apply animation to elements with glowing borders */
 .glowing-border:hover {
     animation: glowing 1.5s infinite;
-    /* Apply glowing animation on hover */
 }
 
 #social-links {
@@ -369,7 +484,6 @@ footer {
 
     nav ul {
         display: none;
-        /* Hide the regular navigation */
     }
 
     nav {
@@ -391,10 +505,11 @@ footer {
         width: 20rem;
         /* Adjust width for tablets and small screens */
     }
+
     .new-collab {
         font-size: 2rem;
         text-align: center;
-    
+
     }
 
 
@@ -428,7 +543,6 @@ footer {
     @media (max-width: 768px) {
         nav ul {
             display: none;
-            /* Hide the regular navigation */
         }
 
         nav {
@@ -448,9 +562,8 @@ footer {
 
         .new-collab-img-cont {
             width: 20rem;
-            /* Adjust width for tablets and small screens */
         }
     }
 
-  
+
 }
