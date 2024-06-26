@@ -49,35 +49,6 @@ h2 {
         1px 1px 0 #ffffff;
 }
 
-h3 {
-    font-size: 3rem;
-    background: linear-gradient(to bottom, #000, #980909);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    text-align: center;
-    position: relative;
-    display: block;
-}
-
-h3::before {
-    content: "new single";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    z-index: -1;
-    text-shadow:
-        -1px -1px 0 #ffffff,
-        1px -1px 0 #ffffff,
-        -1px 1px 0 #ffffff,
-        1px 1px 0 #ffffff;
-}
-
-
 p {
     font-size: 2rem;
     text-align: center;
@@ -507,9 +478,24 @@ footer {
     }
 
     .new-collab {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
 
+    }
+
+    .freak-img-cont {
+        width: 20rem;
+        /* Adjust width for tablets and small screens */
+    }
+
+    .freak {
+        font-size: 3rem;
+        text-align: center;
+
+    }
+
+    p {
+        font-size: 2rem;
     }
 
 
