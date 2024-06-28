@@ -22,7 +22,7 @@ h2 {
 
 .freak {
     font-size: 5rem;
-    background: linear-gradient(to bottom, #000, #980909);
+    background: linear-gradient(to bottom, #4a2222, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -32,7 +32,7 @@ h2 {
     display: block;
 }
 
-.freak::before {
+/*.freak::before {
     content: "FREAK";
     position: absolute;
     top: 0;
@@ -47,13 +47,13 @@ h2 {
         -1px 1px 0 #ffffff,
         1px 1px 0 #ffffff;
     text-transform: uppercase;
-}
+}*/
 
 p {
     font-size: 2rem;
     text-align: center;
     font-size: 3rem;
-    background: linear-gradient(to bottom, #000, #980909);
+    background: linear-gradient(to bottom, #684141, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -63,7 +63,7 @@ p {
 
 }
 
-p::before {
+/*p::before {
     content: "out 5th july!";
     position: absolute;
     top: 0;
@@ -77,7 +77,7 @@ p::before {
         1px -1px 0 #fff,
         -1px 1px 0 #ffffff,
         1px 1px 0 #fff;
-}
+}*/
 
 .new-collab {
     font-size: 2.5rem;
@@ -99,7 +99,7 @@ p::before {
     margin: 0 auto;
     height: auto;
     overflow: hidden;
-    box-shadow: 0 0 20px 10px #980909cc;
+    box-shadow: 0 0 20px 10px #ffffffcc;
 }
 
 .freak-img-cont img {
