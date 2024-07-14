@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Mokoto';
+    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: monospace;
+    background-image: url('../img/laura12.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: #001409;
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h1 {
+    font-family: 'Mokoto', monospace;
+}
+
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+ul {
+    margin-top: 1rem;
+    font-family: 'Mokoto', monospace;
+    text-align: center;
+    font-size: 1.7rem;
+
+    li {
+        display: inline-block;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            .submenu {
+                height: 3rem;
+            }
+
+            a {
+                color: #00f2ff;
+
+                &::before {
+                    visibility: visible;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+
+        .submenu {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            height: 0;
+            line-height: 2rem;
+            box-sizing: border-box;
+            transition: height 0.3s ease-in-out;
+            transition-delay: 0s;
+
+            a {
+                color: #fff;
+
+                font-size: 1.3rem;
+
+                &:hover {
+                    color: #00f2ff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        a {
+            color: #ffffff;
+            display: block;
+            padding: 0 0.8rem 0 0.8rem;
+            text-decoration: none;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                background-color: transparent;
+                transition: all 0.2s ease-in-out;
+                transform: scale(0, 0);
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 15rem;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.call-button {
+    background-color: #68d7f5;
+}
+
+.call-button:hover {
+    background-color: #5a4bb2;
+}
+
+.email-button {
+    background-color: #68d7f5;
+}
+
+.email-button:hover {
+    background-color: #5a4bb2;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.sm_icons {
+    width: 2.2rem;
+    height: auto;
+    margin: 1rem;
+}

@@ -78,6 +78,7 @@ header {
 }
 
 ul {
+    font-family: 'Mokoto', monospace;
     background-color: #00000000;
     text-align: center;
     font-size: 1.5rem;
@@ -197,12 +198,13 @@ main {
     font-size: 1.5rem;
 }
 
-.tour-dates h2 {
+.tour-dates h1 {
+    font-family: 'Mokoto';
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #ffffff;
-    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    text-shadow: 3px 3px 6px rgb(251, 15, 251);
 }
 
 .date {
@@ -265,6 +267,11 @@ main {
     display: inline-block;
 }
 
+.check {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #00ff99;
+}
 
 @media screen and (max-width:450px) {
 

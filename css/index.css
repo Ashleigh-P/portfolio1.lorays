@@ -49,10 +49,9 @@ h2 {
 }*/
 
 p {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
-    font-size: 3rem;
-    background: linear-gradient(to bottom, #684141, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #3ec8ee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -300,7 +299,7 @@ h5 {
 .disclaimer-container {
     font-family: 'Mokoto';
     padding-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
 }
 
@@ -337,6 +336,7 @@ h5 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 3;
 }
 
 .button-vid-overlay video {
@@ -349,15 +349,6 @@ h5 {
     opacity: 1;
 }
 
-.about-me {
-    color: #e02cfb;
-    text-decoration: none;
-}
-
-.about-me:hover {
-    color: #00ddfe;
-    transform: scale(1.05);
-}
 
 /*-----*/
 
