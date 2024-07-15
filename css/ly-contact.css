@@ -89,9 +89,7 @@ header {
 .flex-container {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center align items horizontally */
 }
 
 .button-container1 {

@@ -45,6 +45,62 @@ h1 {
     z-index: 1000;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align items horizontally */
+}
+
+.button-container1 {
+    margin-top: 25rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.call-us,
+.email-us {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #4b585c, #04acf4);
+    color: #d8d8d8;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 35px;
+    box-shadow: 0 0 15px rgb(60, 149, 179), 0 0 20px rgb(241, 243, 245);
+}
+
+.call-us:hover,
+.email-us:hover {
+    background: linear-gradient(45deg #e6e6e6, #34e1ff);
+
+    box-shadow: 0 0 20px rgb(238, 17, 227), 0 0 30px rgba(6, 182, 212, 0.8);
+
+}
+
+.call-us:active,
+.email-us:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgb(59, 159, 246), 0 0 20px rgba(212, 6, 202, 0.5);
+}
+
+.call-us a,
+.email-us a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.call-us a:hover,
+.email-us a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
 
 ul {
     margin-top: 1rem;
@@ -162,4 +218,92 @@ ul {
     width: 2.2rem;
     height: auto;
     margin: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+
+    .call-us,
+    .email-us {
+        font-size: 1.3rem;
+        padding: 6px 10px;
+        margin-left: 0rem;
+    }
+
+    .button-container1 {
+        display: flex;
+        margin-bottom: 0.5rem;
+        gap: 1.5rem;
+
+    }
+
+    .sm_icons {
+        width: 1.5rem;
+        height: auto;
+        margin: 0.3rem;
+    }
+
+    #social-links {
+        display: flex;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .menu-btn {
+        margin-top: 1.5rem;
+        display: block;
+    }
+
+    .nav {
+        font-size: .5rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .nav ul {
+        font-size: 1rem;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .nav.open {
+        padding-top: 0;
+        display: flex;
+        color: white;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .nav li:hover .submenu {
+        display: none;
+    }
+
+    .submenu li {
+        background-color: transparent;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        text-align: left;
+        color: white;
+    }
+
 }
