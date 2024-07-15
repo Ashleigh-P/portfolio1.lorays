@@ -48,7 +48,7 @@ h2 {
     text-transform: uppercase;
 }*/
 
-p {
+.copy {
     font-size: 1rem;
     text-align: center;
     background: linear-gradient(to bottom, #ffffff, #3ec8ee);
@@ -545,6 +545,12 @@ footer {
 
     .disclaimer-container {
         font-size: 1rem;
+
+    }
+
+    .copy {
+        font-size: 0.5rem;
+
 
     }
 
