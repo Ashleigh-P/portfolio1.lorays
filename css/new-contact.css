@@ -32,7 +32,11 @@ html {
     flex-grow: 1;
 }
 
-.contact-us {
+.logo {
+    width: 50rem;
+}
+
+/*.contact-us {
     font-family: 'Mokoto', monospace;
     font-size: 4rem;
     color: #85def6;
@@ -41,7 +45,7 @@ html {
         1px -1px 0 #000000,
         -1px 1px 0 #000000,
         1px 1px 0 #000000;
-}
+}*/
 
 .menu-btn {
     color: #00f2ff;
@@ -228,6 +232,10 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
+
+    .logo {
+        width: 20rem;
+    }
 
     .contact-us {
         font-size: 2.5rem;
