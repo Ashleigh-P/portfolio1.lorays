@@ -32,8 +32,15 @@ html {
     flex-grow: 1;
 }
 
-h1 {
+.contact-us {
     font-family: 'Mokoto', monospace;
+    font-size: 4rem;
+    color: #85def6;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
 }
 
 .menu-btn {
@@ -220,11 +227,15 @@ ul {
     margin: 1rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
+
+    .contact-us {
+        font-size: 2.5rem;
+    }
 
     .call-us,
     .email-us {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         padding: 6px 10px;
         margin-left: 0rem;
     }
@@ -260,7 +271,7 @@ ul {
     }
 
     .nav {
-        font-size: .5rem;
+        font-size: .7rem;
         display: none;
         flex-direction: column;
         width: 100%;
@@ -295,7 +306,7 @@ ul {
     .nav.open {
         display: flex;
         color: white;
-        transform: translateY(-80%);
+        transform: translateY(-90%);
         transition: transform 0.3s ease-in-out;
     }
 

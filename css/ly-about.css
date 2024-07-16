@@ -24,6 +24,10 @@ html {
 }
 
 
+
+
+
+
 body {
     font-family: monospace;
     text-align: center;
@@ -311,6 +315,7 @@ ul {
     font-family: monospace;
     font-size: 2.1rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
+    z-index: 2;
 }
 
 
@@ -348,11 +353,28 @@ ul {
     margin: 10px;
 }
 
+.item1 {
+    background: linear-gradient(to top, #922cf8, #6619eb);
+    z-index: 1;
+    height: 50vh;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 20rem;
+    z-index: 1;
+}
+
 .mail-list {
     width: 20rem;
 }
 
 #mailing-list {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,12 +384,17 @@ ul {
 }
 
 #subscribe-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    z-index: 1;
 }
 
 #subscribe-form h2 {
@@ -418,7 +445,7 @@ ul {
     font-family: monospace;
     font-size: 1.2rem;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
 }
 
@@ -435,7 +462,18 @@ ul {
 
 
 @media screen and (max-width: 450px) {
+
+    .item1 {
+        width: auto;
+    }
+
+    .bio {
+        width: 15rem;
+    }
+
+
     #subscribe-form h2 {
+        padding-top: 3rem;
         font-size: 1.5rem;
     }
 
@@ -444,7 +482,7 @@ ul {
         font-family: monospace;
         letter-spacing: 0.2rem;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 2rem;
 
 
     }
@@ -457,6 +495,7 @@ ul {
         font-family: monospace;
         font-size: 1.3rem;
         text-align: center;
+        padding: 0;
     }
 
     strong,
