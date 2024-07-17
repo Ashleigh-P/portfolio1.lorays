@@ -353,23 +353,24 @@ ul {
     margin: 10px;
 }
 
-.item1 {
+/*.item1 {
     background: linear-gradient(to top, #922cf8, #6619eb);
     z-index: 1;
     height: 50vh;
     width: 30rem;
     margin: 0 auto;
-}
+}*/
 
 .bio {
     display: flex;
     align-items: center;
     justify-self: center;
-    width: 20rem;
+    width: 25rem;
     z-index: 1;
 }
 
 .mail-list {
+    margin-top: 2rem;
     width: 20rem;
 }
 
@@ -398,15 +399,26 @@ ul {
 }
 
 #subscribe-form h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: -3rem;
+    text-shadow:
+        -1px -1px 0 #252525,
+        1px -1px 0 #252525,
+        -1px 1px 0 #252525,
+        1px 1px 0 #252525;
+
 }
 
 #subscribe-form h3 {
     font-family: monospace;
     letter-spacing: 0.2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    text-shadow:
+        -1px -1px 0 #13b4d4,
+        1px -1px 0 #13b4d4,
+        -1px 1px 0 #13b4d4,
+        1px 1px 0 #13b4d4;
     text-align: center;
     margin-bottom: -.5rem;
 }
@@ -415,12 +427,23 @@ ul {
 #subscribe-form p {
     text-align: center;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    text-shadow:
+        -1px -1px 0 #13b4d4,
+        1px -1px 0 #13b4d4,
+        -1px 1px 0 #13b4d4,
+        1px 1px 0 #13b4d4;
+
 }
 
 #subscribe-form label {
     margin-bottom: 5px;
     font-size: 1rem;
+    text-shadow:
+        -1px -1px 0 #13b4d4,
+        1px -1px 0 #13b4d4,
+        -1px 1px 0 #13b4d4,
+        1px 1px 0 #13b4d4;
 }
 
 #subscribe-form input {
@@ -428,7 +451,8 @@ ul {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #13b4d4;
+
 }
 
 .submit {
@@ -445,7 +469,7 @@ ul {
     font-family: monospace;
     font-size: 1.2rem;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    margin-bottom: 9rem;
     box-shadow: 0 0 15px rgba(107, 233, 255, 0.736), 0 0 20px rgb(88, 243, 235);
 }
 
@@ -468,12 +492,15 @@ ul {
     }
 
     .bio {
-        width: 15rem;
+        width: 17rem;
     }
 
+    .submit {
+        margin-bottom: 3rem;
+    }
 
     #subscribe-form h2 {
-        padding-top: 3rem;
+        padding-top: 3.5rem;
         font-size: 1.5rem;
     }
 
@@ -482,13 +509,14 @@ ul {
         font-family: monospace;
         letter-spacing: 0.2rem;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
 
 
     }
 
     .mail-list {
         width: 15rem;
+        margin-top: 3rem;
     }
 
     p {
@@ -568,6 +596,7 @@ ul {
     .tourdates {
         font-size: 1rem;
         padding: 10px 20px;
+        margin-top: 6rem;
     }
 
     #social-links {
