@@ -234,7 +234,10 @@ ul {
 @media screen and (max-width: 480px) {
 
     .logo {
-        width: 20rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 17rem;
+        transform: scale(1.6);
     }
 
     .contact-us {
@@ -291,7 +294,7 @@ ul {
     }
 
     .nav ul {
-        font-size: 1rem;
+        font-size: 1.5rem;
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -314,7 +317,7 @@ ul {
     .nav.open {
         display: flex;
         color: white;
-        transform: translateY(-90%);
+        transform: translateY(-50%);
         transition: transform 0.3s ease-in-out;
     }
 
