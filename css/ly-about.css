@@ -18,15 +18,15 @@ html {
     transform: translateX(0);
 }
 
-.iceland-regular {
-    font-family: "Iceland", sans-serif;
+.orbitron-lorays {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-
 body {
-    font-family: "Iceland", sans-serif;
+    font-family: "Orbitron", sans-serif;
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -34,8 +34,8 @@ body {
 }
 
 h2 {
-    font-family: "Iceland", sans-serif;
-    font-size: 1.7rem;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.9rem;
 }
 
 .main {
@@ -54,7 +54,7 @@ ul {
 }
 
 .glow {
-    font-family: "Iceland", sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 2.3rem;
     color: #b4dbf3;
     text-align: center;
@@ -84,19 +84,18 @@ ul {
 }
 
 pre {
+    font-family: "Orbitron", sans-serif;
     font-size: 1.25rem;
     text-align: center;
     white-space: normal;
 }
 
-/*-- float pics left --*/
 .pre-pic1 img {
     float: left;
     max-width: 9.375rem;
     margin-right: 1rem;
 }
 
-/*-- float pics right --*/
 .pre-pic2 img {
     float: right;
     max-width: 9.375rem;
@@ -107,18 +106,16 @@ pre {
 
 .pre-pic3 img {
     max-width: 12rem;
-    box-shadow: 0 0 20px 10px #980909cc;
-
-
+    box-shadow: 0 0 20px 10px #980909cc
 }
 
 
 strong {
-    font-family: "Iceland", sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 i {
-    font-family: monospace;
+    font-family: "Orbitron", sans-serif;
 
 }
 
@@ -157,7 +154,7 @@ i {
 
 
 p {
-    font-family: monospace;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -201,7 +198,7 @@ header {
 }
 
 .image-wrapper {
-    font-family: "Iceland", sans-serif;
+    font-family: "Orbitron", sans-serif;
     position: relative;
     margin: 4px;
     overflow: hidden;
@@ -226,7 +223,7 @@ header {
 }
 
 ul {
-    font-family: "Iceland", sans-serif;
+    font-family: "Orbitron", sans-serif;
     text-align: center;
     font-size: 1.5rem;
 
@@ -234,10 +231,12 @@ ul {
         display: inline-block;
         margin-right: 15px;
         transition: all 0.4s ease-in-out;
+        position: relative;
 
         &:hover {
             .submenu {
-                height: 85px;
+                width: auto;
+                height: auto;
             }
 
             a {
@@ -253,23 +252,30 @@ ul {
         .submenu {
             overflow: hidden;
             position: absolute;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            top: 0;
+            white-space: nowrap;
+            width: 0;
             background-color: transparent;
-            height: 0;
+            height: auto;
             line-height: 40px;
             box-sizing: border-box;
             transition: height 0.3s ease-in-out;
             transition-delay: 0s;
 
             a {
-                color: #fff;
+                color: #ffffff;
                 margin-top: 10px;
-                font-size: 18px;
+                font-size: 1.3rem;
 
                 &:hover {
-                    color: #fff;
+                    color: #00f2ff;
                     text-decoration: none !important;
+                    text-shadow:
+                        -1px -1px 0 #252525,
+                        1px -1px 0 #252525,
+                        -1px 1px 0 #252525,
+                        1px 1px 0 #252525;
                 }
             }
         }
@@ -300,6 +306,7 @@ ul {
 
 
 .tourdates {
+    font-family: "Orbitron", sans-serif !important;
     display: inline-block !important;
     position: relative;
     padding: 10px 20px !important;
@@ -349,14 +356,6 @@ ul {
     display: inline-block;
     margin: 10px;
 }
-
-/*.item1 {
-    background: linear-gradient(to top, #922cf8, #6619eb);
-    z-index: 1;
-    height: 50vh;
-    width: 30rem;
-    margin: 0 auto;
-}*/
 
 .bio {
     display: flex;
@@ -408,20 +407,21 @@ ul {
 }
 
 #subscribe-form h3 {
-    font-family: monospace;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.7rem;
+    color: rgb(5, 199, 243);
     text-shadow:
-        -1px -1px 0 #13b4d4,
-        1px -1px 0 #13b4d4,
-        -1px 1px 0 #13b4d4,
-        1px 1px 0 #13b4d4;
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
     text-align: center;
     margin-bottom: -.5rem;
 }
 
 
 #subscribe-form p {
+    font-family: "Orbitron", sans-serif;
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1.3rem;
@@ -453,7 +453,7 @@ ul {
 }
 
 .submit {
-
+    font-family: "Orbitron", sans-serif !important;
     display: inline-block !important;
     position: relative;
     padding: 4px 8px !important;
@@ -508,7 +508,7 @@ ul {
 
     #subscribe-form h3 {
         font-size: 1rem;
-        font-family: monospace;
+        font-family: "Orbitron", sans-serif;
         letter-spacing: 0.2rem;
         text-align: center;
         margin-top: 2.5rem;
@@ -522,7 +522,7 @@ ul {
     }
 
     p {
-        font-family: monospace;
+        font-family: "Orbitron", sans-serif;
         font-size: 1.3rem;
         text-align: center;
         padding: 0;
@@ -532,7 +532,7 @@ ul {
     h2 i {
         font-size: 1.5rem;
         text-align: center;
-        font-family: monospace;
+        font-family: "Orbitron", sans-serif;
     }
 
     .menu-btn {
