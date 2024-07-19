@@ -1,13 +1,13 @@
-@font-face {
-    font-family: 'Mokoto';
-    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
-    font-weight: lighter;
+.orbitron-lorays {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
 }
 
 
 body {
-    font-family: monospace;
+    font-family: "Orbitron", sans-serif;
     background-color: rgb(0, 0, 0);
     margin: 20px;
 }
@@ -54,16 +54,20 @@ header {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-family: 'Mokoto', monospace;
-    font-size: 2.7rem;
-    text-shadow: 4px 4px 5px hsl(184, 100%, 50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #3ec8ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block;
+
 }
 
 h3 {
-    font-family: 'Mokoto', monospace;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -100,14 +104,13 @@ p {
 
 .music-player {
     max-width: 800px;
-    /* Adjust the max-width as needed */
     width: 100%;
 }
 
 /* -----------*/
 
 ul {
-    font-family: 'Mokoto', monospace;
+    font-family: "Orbitron", sans-serif;
     text-align: center;
     font-size: 1.7rem;
 
@@ -294,7 +297,6 @@ figcaption:hover {
 .grid-short-cont iframe {
     width: 100%;
     aspect-ratio: 16/9;
-    /* Maintain aspect ratio */
     border: none;
 }
 
@@ -325,6 +327,7 @@ figcaption:hover {
 
 /*-- top--*/
 .top {
+    font-family: "Orbitron", sans-serif !important;
     display: inline-block !important;
     position: relative;
     padding: 10px 20px !important;
@@ -335,7 +338,6 @@ figcaption:hover {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
     text-decoration: none !important;
     font-family: monospace;
-
     font-size: 2rem;
     box-shadow: 0 0 15px rgba(196, 107, 255, 0.736), 0 0 20px rgb(78, 4, 115);
 
@@ -384,7 +386,7 @@ h5 {
     }
 
     h1 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         text-wrap: wrap;
     }
 

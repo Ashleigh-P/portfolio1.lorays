@@ -1,14 +1,14 @@
-@font-face {
-    font-family: 'Mokoto';
-    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
-    font-weight: lighter;
+.orbitron-lorays {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
 }
 
 :root {
-    --ff-primary: Heebo, ;
-    --ff-secondary: Bungee, cursive;
-    --ff-accent: Bungee Shade, cursive;
+    --ff-primary: "Orbitron", sans-serif;
+    --ff-secondary: "Orbitron", sans-serif;
+    --ff-accent: "Orbitron", sans-serif
 }
 
 /* Box styling rules */
@@ -36,7 +36,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: var(--ff-secondary);
+    font-family: "Orbitron", sans-serif;
 
 }
 
@@ -51,7 +51,7 @@ html:focus-within {
 }
 
 body {
-    font-family: monospace;
+    font-family: "Orbitron", sans-serif;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -71,7 +71,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+    font-family: "Orbitron", sans-serif;
 }
 
 header {
@@ -91,18 +91,20 @@ header {
 
 
 ul {
-    font-family: 'Mokoto', monospace;
+    font-family: "Orbitron", sans-serif;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 
     li {
         display: inline-block;
         margin-right: 15px;
         transition: all 0.4s ease-in-out;
+        position: relative;
 
         &:hover {
             .submenu {
-                height: 85px;
+                width: auto;
+                height: auto;
             }
 
             a {
@@ -118,10 +120,12 @@ ul {
         .submenu {
             overflow: hidden;
             position: absolute;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            top: 60%;
+            white-space: nowrap;
             background-color: transparent;
             height: 0;
+            transform: translateX(30%);
             line-height: 40px;
             box-sizing: border-box;
             transition: height 0.3s ease-in-out;
@@ -130,10 +134,10 @@ ul {
             a {
                 color: #fff;
                 margin-top: 10px;
-                font-size: 18px;
+                font-size: 1.3rem;
 
                 &:hover {
-                    color: #fff;
+                    color: #00f2ff;
                     text-decoration: none !important;
                 }
             }
@@ -164,8 +168,6 @@ ul {
 }
 
 
-/* remove all animations, transitions */
-
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
@@ -186,7 +188,7 @@ ul {
 
 
 body {
-    font-family: var (--ff-primary);
+    font-family: "Orbitron", sans-serif;
     font-size: 1rem;
     padding: 2rem 0;
     background-color: rgb(0, 0, 0);
@@ -235,7 +237,6 @@ nav ul li a::before {
     bottom: -10px;
     left: 0;
     background-color: transparent;
-    /* Bottom border color */
     transition: all 0.2s ease-in-out, visibility 0.2 ease-in-out;
     transform: scaleX(0);
     visibility: hidden;
@@ -289,13 +290,11 @@ nav ul li:hover a::before {
 }
 
 .card__title {
-    font-family: 'Mokoto', monospace;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.2rem;
     line-height: 1.1;
-    /*color*/
 }
 
-/*-- card link text decor ---*/
 a {
     color: white;
     text-decoration: none;
@@ -310,6 +309,11 @@ a {
     width: 100%;
     aspect-ratio: 1 / 1.25;
     object-fit: cover;
+}
+
+.special-alert {
+    color: rgb(252, 7, 7);
+    letter-spacing: 0.12rem;
 }
 
 
