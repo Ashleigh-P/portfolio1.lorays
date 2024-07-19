@@ -1,7 +1,7 @@
-@font-face {
-    font-family: 'Mokoto';
-    src: url(/fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf);
-    font-weight: lighter;
+.orbitron-lorays {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -13,7 +13,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: monospace;
+    font-family: "Orbitron", sans-serif;
     background-image: url('../img/laura12.jpg');
     background-size: contain;
     background-position: center;
@@ -36,17 +36,6 @@ html {
     width: 50rem;
 }
 
-/*.contact-us {
-    font-family: 'Mokoto', monospace;
-    font-size: 4rem;
-    color: #85def6;
-    text-shadow:
-        -1px -1px 0 #000000,
-        1px -1px 0 #000000,
-        -1px 1px 0 #000000,
-        1px 1px 0 #000000;
-}*/
-
 .menu-btn {
     color: #00f2ff;
     display: none;
@@ -59,9 +48,7 @@ html {
 .flex-container {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center align items horizontally */
 }
 
 .button-container1 {
@@ -72,6 +59,8 @@ html {
 
 .call-us,
 .email-us {
+    font-family: "Orbitron", sans-serif !important;
+
     display: inline-block;
     position: relative;
     padding: 10px 20px;
@@ -114,7 +103,7 @@ html {
 
 ul {
     margin-bottom: 3rem;
-    font-family: 'Mokoto', monospace;
+    font-family: "Orbitron", sans-serif;
     text-align: center;
     font-size: 1.7rem;
 
@@ -234,10 +223,9 @@ ul {
 @media screen and (max-width: 480px) {
 
     .logo {
-        margin: 0 auto;
-        margin-top: 2rem;
-        width: 17rem;
-        transform: scale(1.6);
+        margin-top: 0.5rem;
+        width: 14.5rem;
+        transform: scale(1.5);
     }
 
     .contact-us {
@@ -271,7 +259,7 @@ ul {
     }
 
     .button-container1 {
-        gap: 5rem;
+        gap: 4rem;
     }
 
 
