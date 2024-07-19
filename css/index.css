@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Mokoto';
-    src: url('ashleigh-p.lorays.github.io\fonts\mokoto-ttf\mokoto-mokoto-regular-400.ttf');
+    src: url('../fonts/mokoto-ttf/mokoto-mokoto-regular-400.ttf') format ('ttf');
 }
 
 
