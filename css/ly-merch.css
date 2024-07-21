@@ -89,11 +89,11 @@ header {
     z-index: 1000;
 }
 
-
 ul {
     font-family: "Orbitron", sans-serif;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
 
     li {
         display: inline-block;
@@ -120,12 +120,12 @@ ul {
         .submenu {
             overflow: hidden;
             position: absolute;
-            left: 50%;
-            top: 60%;
+            left: 0;
+            top: 50%;
             white-space: nowrap;
             background-color: transparent;
             height: 0;
-            transform: translateX(30%);
+            transform: translateX(0%);
             line-height: 40px;
             box-sizing: border-box;
             transition: height 0.3s ease-in-out;
@@ -208,6 +208,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-bottom: 1.5rem;
 }
 
 nav ul li {
@@ -321,7 +322,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 3rem;
+    padding-bottom: 1.7rem;
 }
 
 #social-links {

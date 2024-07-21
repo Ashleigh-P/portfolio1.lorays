@@ -118,10 +118,12 @@ ul {
         display: inline-block;
         margin-right: 15px;
         transition: all 0.4s ease-in-out;
+        position: relative;
 
         &:hover {
             .submenu {
-                height: 85px;
+                width: auto;
+                height: auto;
             }
 
             a {
@@ -137,8 +139,10 @@ ul {
         .submenu {
             overflow: hidden;
             position: absolute;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            top: 50%;
+            white-space: nowrap;
+            width: 0;
             background-color: transparent;
             height: 0;
             line-height: 40px;
@@ -210,6 +214,7 @@ figure {
 }
 
 .lucy {
+    /* ---class for all photographers links ---*/
     text-align: center;
     text-decoration: none;
     color: rgb(216, 5, 205);

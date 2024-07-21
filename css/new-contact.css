@@ -52,7 +52,7 @@ html {
 }
 
 .button-container1 {
-    margin-top: 20rem;
+    margin-top: 15rem;
     display: flex;
     gap: 20rem;
 }
@@ -102,7 +102,7 @@ html {
 }
 
 ul {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-family: "Orbitron", sans-serif;
     text-align: center;
     font-size: 1.7rem;
