@@ -13,6 +13,19 @@ body {
     color: #333;
 }
 
+.post {
+    color: rgb(255, 0, 0);
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+}
+
 header {
     text-align: center;
     position: relative;
@@ -386,6 +399,10 @@ main {
 
     .date {
         padding: 0.5rem;
+    }
+
+    .post {
+        font-size: 1rem;
     }
 
 
