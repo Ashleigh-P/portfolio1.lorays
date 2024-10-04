@@ -13,18 +13,6 @@ body {
     color: #333;
 }
 
-.post {
-    color: rgb(255, 0, 0);
-    text-shadow:
-        -1px -1px 0 #ffffff,
-        1px -1px 0 #ffffff,
-        -1px 1px 0 #ffffff,
-        1px 1px 0 #ffffff;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    margin-top: 0.5rem;
-}
 
 header {
     text-align: center;
@@ -77,18 +65,7 @@ header {
     margin-bottom: -1rem;
 }
 
-.tourdate-heading {
-    text-align: center;
-    color: #fff;
-    text-shadow:
-        -1px -1px 0 #030303,
-        1px -1px 0 #0a0a0a,
-        -1px 1px 0 #000000,
-        1px 1px 0 #070707;
-    font-size: 2.5rem;
-    margin-top: -2rem;
 
-}
 
 ul {
     font-family: "Orbitron", sans-serif;
@@ -198,43 +175,53 @@ main {
     padding: 1rem;
 }
 
+.post {
+    color: rgb(255, 0, 0);
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+}
+
 .tour-dates {
     background-color: transparent;
     padding: 0rem;
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 800px;
-}
-
-.tour-dates h3 {
     text-align: center;
-    font-size: 1.9rem;
-}
-
-.tour-dates p {
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 .tour-dates h1 {
     font-family: "Orbitron", sans-serif;
-    text-align: center;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #ffffff;
     text-shadow: 3px 3px 6px rgb(251, 15, 251);
 }
 
-.date {
+.tourdate-heading {
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #030303,
+        1px -1px 0 #0a0a0a,
+        -1px 1px 0 #000000,
+        1px 1px 0 #070707;
+    font-size: 2.5rem;
+    margin-top: -2rem;
 
+}
+
+.date {
     color: rgb(255, 255, 255);
     margin-bottom: 2rem;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+
 }
 
 .date h3 {
@@ -245,20 +232,19 @@ main {
         1px -1px 0 #0a0a0a,
         -1px 1px 0 #000000,
         1px 1px 0 #070707;
+    font-size: 1.9rem;
 }
 
 .date p {
     margin: 0 0 0.5rem;
+    font-size: 1.5rem;
 }
 
 .date a {
     font-family: "Orbitron", sans-serif;
-
     display: block;
-    margin: 0 auto;
+    margin: 0.5rem auto;
     width: 150px;
-    max-width: 200px;
-    margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
