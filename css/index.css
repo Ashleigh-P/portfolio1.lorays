@@ -91,6 +91,8 @@ h2 {
     max-height: 100%;
     width: auto;
     height: auto;
+    margin-top: 1rem;
+
 }
 
 .image-wrapper {
@@ -386,31 +388,34 @@ footer {
     .copy {
         font-size: 0.8rem;
     }
+}
 
-    @media (max-width: 768px) {
-        nav ul {
-            display: none;
-        }
-
-        nav {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        nav ul {
-            font-size: 20px;
-            flex-direction: column;
-        }
-
-        nav ul li {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-
-        .new-collab-img-cont {
-            width: 20rem;
-        }
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
     }
+
+    nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav ul {
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .new-collab-img-cont {
+        width: 20rem;
+    }
+
+
+}
 
 
 }
