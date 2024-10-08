@@ -22,17 +22,24 @@ h2 {
 
 .copy {
     font-family: "Orbitron", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
-    background: linear-gradient(to bottom, #ffffff, #3ec8ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: rgb(191, 142, 237);
     position: relative;
     display: block;
 
 }
+
+.copy .contact {
+    color: #0dbcf6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copy .contact:hover {
+    color: #ec55fa;
+}
+
 
 .header {
     width: 100%;
@@ -312,6 +319,9 @@ footer {
     padding: 20px 0;
 }
 
+
+
+
 @media screen and (max-width: 470px) {
 
     nav ul {
@@ -386,7 +396,7 @@ footer {
     }
 
     .copy {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 

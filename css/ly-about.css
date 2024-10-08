@@ -124,7 +124,8 @@ i {
 .mur,
 .laura,
 .vukovi,
-.freak {
+.freak,
+.contact {
     text-decoration: none;
     color: rgb(216, 5, 205);
     transition: color 0.3s ease;
@@ -136,7 +137,8 @@ i {
 .mur:hover,
 .laura:hover,
 .vukovi:hover,
-.freak:hover {
+.freak:hover,
+contact:hover {
     color: rgb(5, 199, 243);
 
 }
