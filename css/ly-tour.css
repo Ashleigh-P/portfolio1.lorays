@@ -59,7 +59,6 @@ header {
 }
 
 .tour-head {
-    width: 65%;
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -71,6 +70,26 @@ header {
     height: auto;
     margin-bottom: -1rem;
 }
+
+p {
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0;
+}
+
+.contact {
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+    transition: color 0.3s ease;
+}
+
+.contact:hover {
+    color: rgb(5, 199, 243);
+
+}
+
 
 
 
@@ -372,7 +391,6 @@ main {
 
     .head-logo {
         margin-top: 1rem;
-        transform: scale(1.5);
     }
 
     .bg-img {
@@ -402,6 +420,16 @@ main {
         font-size: 2rem;
         text-align: center;
         color: #00f2ff;
-
-
     }
+
+    p {
+        color: white;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+
+
+}
+}
