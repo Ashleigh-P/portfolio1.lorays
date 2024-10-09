@@ -21,10 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  document.querySelectorAll('.collapsible').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
+ // Hide all content sections initially
+document.querySelectorAll('.collapsible').forEach(button => {
+  const content = button.nextElementSibling;
+  content.style.display = 'none'; // Hide the content initially
+
+  // Add click event to toggle visibility
+  button.addEventListener('click', () => {
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  });
 });
   

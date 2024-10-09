@@ -138,7 +138,7 @@ i {
 .laura:hover,
 .vukovi:hover,
 .freak:hover,
-contact:hover {
+.contact:hover {
     color: rgb(5, 199, 243);
 
 }
@@ -167,14 +167,10 @@ div {
     justify-items: center;
 }
 
-.hero {
-    width: 100%;
-    position: relative;
-}
 
 .hero-image {
-    width: 70%;
-    height: auto;
+    width: 100%;
+    margin: 0 auto;
 
 }
 
@@ -655,9 +651,6 @@ ul {
         margin: 10px;
     }
 
-    .hero-image {
-        transform: scale(1.5);
-    }
 
 
 

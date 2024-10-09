@@ -377,6 +377,25 @@ h5 {
 
 }
 
+.contact {
+    text-decoration: none;
+    color: rgb(216, 5, 205);
+    transition: color 0.3s ease;
+}
+
+.contact:hover {
+    color: rgb(5, 199, 243);
+
+}
+
+p {
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
 
 @media screen and (max-width: 760px) {
     body {
@@ -533,6 +552,10 @@ h5 {
     h1 {
         font-size: 1.5rem;
         text-wrap: wrap;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     #social-links {
