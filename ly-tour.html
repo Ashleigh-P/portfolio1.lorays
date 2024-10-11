@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/fav-lr-removebg-preview.png">
     <link rel="stylesheet" href="css/ly-tour.css">
+    <link rel="stylesheet" href="css/maze1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -45,15 +46,174 @@
  <p class="mazep"> Trap Or Escape... can you do it in 27 moves?</p>
 
 
+<form>
+  <!-- radio buttons-->
+  <input type="radio" name="maze" id="r0-0" checked="checked"/>
+  <input type="radio" name="maze" id="r0-1"/>
+  <input type="radio" name="maze" id="r0-2"/>
+  <input type="radio" name="maze" id="r0-3"/>
+  <input type="radio" name="maze" id="r0-4"/>
+  <input type="radio" name="maze" id="r0-5"/>
+  <input type="radio" name="maze" id="r0-6"/>
+  <input type="radio" name="maze" id="r0-7"/>
+  <input type="radio" name="maze" id="r1-0"/>
+  <input type="radio" name="maze" id="r1-1"/>
+  <input type="radio" name="maze" id="r1-2"/>
+  <input type="radio" name="maze" id="r1-3"/>
+  <input type="radio" name="maze" id="r1-4"/>
+  <input type="radio" name="maze" id="r1-5"/>
+  <input type="radio" name="maze" id="r1-6"/>
+  <input type="radio" name="maze" id="r1-7"/>
+  <input type="radio" name="maze" id="r2-0"/>
+  <input type="radio" name="maze" id="r2-1"/>
+  <input type="radio" name="maze" id="r2-2"/>
+  <input type="radio" name="maze" id="r2-3"/>
+  <input type="radio" name="maze" id="r2-4"/>
+  <input type="radio" name="maze" id="r2-5"/>
+  <input type="radio" name="maze" id="r2-6"/>
+  <input type="radio" name="maze" id="r2-7"/>
+  <input type="radio" name="maze" id="r3-0"/>
+  <input type="radio" name="maze" id="r3-1"/>
+  <input type="radio" name="maze" id="r3-2"/>
+  <input type="radio" name="maze" id="r3-3"/>
+  <input type="radio" name="maze" id="r3-4"/>
+  <input type="radio" name="maze" id="r3-5"/>
+  <input type="radio" name="maze" id="r3-6"/>
+  <input type="radio" name="maze" id="r3-7"/>
+  <input type="radio" name="maze" id="r4-0"/>
+  <input type="radio" name="maze" id="r4-1"/>
+  <input type="radio" name="maze" id="r4-2"/>
+  <input type="radio" name="maze" id="r4-3"/>
+  <input type="radio" name="maze" id="r4-4"/>
+  <input type="radio" name="maze" id="r4-5"/>
+  <input type="radio" name="maze" id="r4-6"/>
+  <input type="radio" name="maze" id="r4-7"/>
+  <input type="radio" name="maze" id="r5-0"/>
+  <input type="radio" name="maze" id="r5-1"/>
+  <input type="radio" name="maze" id="r5-2"/>
+  <input type="radio" name="maze" id="r5-3"/>
+  <input type="radio" name="maze" id="r5-4"/>
+  <input type="radio" name="maze" id="r5-5"/>
+  <input type="radio" name="maze" id="r5-6"/>
+  <input type="radio" name="maze" id="r5-7"/>
+  <input type="radio" name="maze" id="r6-0"/>
+  <input type="radio" name="maze" id="r6-1"/>
+  <input type="radio" name="maze" id="r6-2"/>
+  <input type="radio" name="maze" id="r6-3"/>
+  <input type="radio" name="maze" id="r6-4"/>
+  <input type="radio" name="maze" id="r6-5"/>
+  <input type="radio" name="maze" id="r6-6"/>
+  <input type="radio" name="maze" id="r6-7"/>
+  <input type="radio" name="maze" id="r7-0"/>
+  <input type="radio" name="maze" id="r7-1"/>
+  <input type="radio" name="maze" id="r7-2"/>
+  <input type="radio" name="maze" id="r7-3"/>
+  <input type="radio" name="maze" id="r7-4"/>
+  <input type="radio" name="maze" id="r7-5"/>
+  <input type="radio" name="maze" id="r7-6"/>
+  <input type="radio" name="maze" id="r7-7"/>
+  <!-- maze with player-->
+  <div class="maze">
+    <div class="player"></div>
+  </div>
+  <!-- menu with labels-->
+  <div class="menu">
+    <label for="r0-0"></label>
+    <label for="r0-1"></label>
+    <label for="r0-2"></label>
+    <label for="r0-3"></label>
+    <label for="r0-4"></label>
+    <label for="r0-5"></label>
+    <label for="r0-6"></label>
+    <label for="r0-7"></label>
+    <label for="r1-0"></label>
+    <label for="r1-1"></label>
+    <label for="r1-2"></label>
+    <label for="r1-3"></label>
+    <label for="r1-4"></label>
+    <label for="r1-5"></label>
+    <label for="r1-6"></label>
+    <label for="r1-7"></label>
+    <label for="r2-0"></label>
+    <label for="r2-1"></label>
+    <label for="r2-2"></label>
+    <label for="r2-3"></label>
+    <label for="r2-4"></label>
+    <label for="r2-5"></label>
+    <label for="r2-6"></label>
+    <label for="r2-7"></label>
+    <label for="r3-0"></label>
+    <label for="r3-1"></label>
+    <label for="r3-2"></label>
+    <label for="r3-3"></label>
+    <label for="r3-4"></label>
+    <label for="r3-5"></label>
+    <label for="r3-6"></label>
+    <label for="r3-7"></label>
+    <label for="r4-0"></label>
+    <label for="r4-1"></label>
+    <label for="r4-2"></label>
+    <label for="r4-3"></label>
+    <label for="r4-4"></label>
+    <label for="r4-5"></label>
+    <label for="r4-6"></label>
+    <label for="r4-7"></label>
+    <label for="r5-0"></label>
+    <label for="r5-1"></label>
+    <label for="r5-2"></label>
+    <label for="r5-3"></label>
+    <label for="r5-4"></label>
+    <label for="r5-5"></label>
+    <label for="r5-6"></label>
+    <label for="r5-7"></label>
+    <label for="r6-0"></label>
+    <label for="r6-1"></label>
+    <label for="r6-2"></label>
+    <label for="r6-3"></label>
+    <label for="r6-4"></label>
+    <label for="r6-5"></label>
+    <label for="r6-6"></label>
+    <label for="r6-7"></label>
+    <label for="r7-0"></label>
+    <label for="r7-1"></label>
+    <label for="r7-2"></label>
+    <label for="r7-3"></label>
+    <label for="r7-4"></label>
+    <label for="r7-5"></label>
+    <label for="r7-6"></label>
+    <label for="r7-7"></label>
+  </div>
 
-<div class="maze-container">
-  <div class="maze" id="maze">
+  
+  <!-- reset button-->
+  <button type="reset">Restart</button>
+  <!-- win modal-->
+  <div class="win"><span>You solved the maze!</span>
+    <button type="reset">Restart</button>
+  </div>
+</form>
 
 
-      <div class="maze-center">
-         
+                <!-- Success Modal-->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Escape!</h2>
+    <p>You rule this place now! It's No Democracy!</p>
+    <button id="redirectBtn">Tonight we are free!!!</button>
+  </div>
+</div> 
+
+<!-- Failure Modal -->
+<div id="failureModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Trap</h2>
+    <p>Do you feel it too is this some kind of glitch?!</p>
+    <button id="retryBtn">Reset, Reset Me!!!</button>
   </div>
 </div>
+
 <br>
 
    
@@ -133,9 +293,11 @@
     
     <p>&copy; 2024 Lo Rays | <a href="new-contact.html" class="contact"><i>Contact Us</i></a> | Follow us on social media</p>
 
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="js/ham-menu.js"></script>
-    <script src="js/maze.js"></script>
+    <script src="js/tourmaze.js"></script>
 </body>
 </div>
 </html>

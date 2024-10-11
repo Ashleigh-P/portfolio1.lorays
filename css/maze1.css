@@ -1,0 +1,1169 @@
+@use "sass:list" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.orbitron-lorays {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #111;
+  color: #ccc;
+  font-family: system-ui, sans-serif;
+  padding-inline: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.maze {
+  margin-top: 1rem;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  outline: 0.25rem solid #ccc;
+  outline-offset: -0.125rem;
+  background-image: linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%), linear-gradient(#ccc 0% 100%);
+  background-size: 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 2.75rem 0.25rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem, 0.25rem 2.75rem;
+  background-position: -0.125rem 2.375rem, -0.125rem 7.375rem, -0.125rem 14.875rem, 2.375rem 4.875rem, 2.375rem 7.375rem, 2.375rem 12.375rem, 4.875rem 12.375rem, 7.375rem 2.375rem, 7.375rem 7.375rem, 7.375rem 12.375rem, 7.375rem 14.875rem, 9.875rem 2.375rem, 9.875rem 4.875rem, 9.875rem 7.375rem, 9.875rem 9.875rem, 9.875rem 14.875rem, 9.875rem 17.375rem, 12.375rem 2.375rem, 12.375rem 7.375rem, 12.375rem 9.875rem, 12.375rem 14.875rem, 14.875rem 9.875rem, 14.875rem 12.375rem, 14.875rem 14.875rem, 14.875rem 17.375rem, 17.375rem 2.375rem, 17.375rem 12.375rem, 17.375rem 17.375rem, 2.375rem 9.875rem, 2.375rem 14.875rem, 4.875rem -0.125rem, 4.875rem 2.375rem, 4.875rem 7.375rem, 4.875rem 12.375rem, 4.875rem 14.875rem, 4.875rem 17.375rem, 7.375rem 2.375rem, 7.375rem 7.375rem, 7.375rem 9.875rem, 7.375rem 14.875rem, 9.875rem 4.875rem, 9.875rem 17.375rem, 12.375rem 9.875rem, 12.375rem 12.375rem, 14.875rem 2.375rem, 14.875rem 4.875rem, 14.875rem 14.875rem, 17.375rem 4.875rem, 17.375rem 7.375rem;
+  background-repeat: no-repeat;
+}
+
+.maze::before {
+  content: "";
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #060;
+  left: 17.625rem;
+  top: 17.625rem;
+}
+
+.player {
+  --x: 0;
+  --y: 0;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgb(161, 51, 239);
+  transform: translate(calc(var(--x) * 2.5rem), calc(var(--y) * 2.5rem)) scale(0.65);
+  transition: transform 180ms ease-out;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input#r0-0:checked~.maze>.player {
+  --x: 0;
+  --y: 0;
+}
+
+input#r0-0:checked~.menu>label[for="r1-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-1:checked~.maze>.player {
+  --x: 0;
+  --y: 1;
+}
+
+input#r0-1:checked~.menu>label[for="r1-1"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-1:checked~.menu>label[for="r0-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r0-2:checked~.maze>.player {
+  --x: 0;
+  --y: 2;
+}
+
+input#r0-2:checked~.menu>label[for="r1-2"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-2:checked~.menu>label[for="r0-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r0-3:checked~.maze>.player {
+  --x: 0;
+  --y: 3;
+}
+
+input#r0-3:checked~.menu>label[for="r1-3"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-3:checked~.menu>label[for="r0-4"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r0-4:checked~.maze>.player {
+  --x: 0;
+  --y: 4;
+}
+
+input#r0-4:checked~.menu>label[for="r0-3"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r0-4:checked~.menu>label[for="r0-5"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r0-5:checked~.maze>.player {
+  --x: 0;
+  --y: 5;
+}
+
+input#r0-5:checked~.menu>label[for="r1-5"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-5:checked~.menu>label[for="r0-4"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r0-6:checked~.maze>.player {
+  --x: 0;
+  --y: 6;
+}
+
+input#r0-6:checked~.menu>label[for="r0-7"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r0-7:checked~.maze>.player {
+  --x: 0;
+  --y: 7;
+}
+
+input#r0-7:checked~.menu>label[for="r1-7"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r0-7:checked~.menu>label[for="r0-6"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r1-0:checked~.maze>.player {
+  --x: 1;
+  --y: 0;
+}
+
+input#r1-0:checked~.menu>label[for="r0-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-0:checked~.menu>label[for="r1-1"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r1-1:checked~.maze>.player {
+  --x: 1;
+  --y: 1;
+}
+
+input#r1-1:checked~.menu>label[for="r0-1"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-1:checked~.menu>label[for="r1-0"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r1-2:checked~.maze>.player {
+  --x: 1;
+  --y: 2;
+}
+
+input#r1-2:checked~.menu>label[for="r0-2"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-2:checked~.menu>label[for="r2-2"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r1-3:checked~.maze>.player {
+  --x: 1;
+  --y: 3;
+}
+
+input#r1-3:checked~.menu>label[for="r0-3"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-3:checked~.menu>label[for="r1-4"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r1-4:checked~.maze>.player {
+  --x: 1;
+  --y: 4;
+}
+
+input#r1-4:checked~.menu>label[for="r2-4"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r1-4:checked~.menu>label[for="r1-3"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r1-5:checked~.maze>.player {
+  --x: 1;
+  --y: 5;
+}
+
+input#r1-5:checked~.menu>label[for="r0-5"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-5:checked~.menu>label[for="r1-6"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r1-6:checked~.maze>.player {
+  --x: 1;
+  --y: 6;
+}
+
+input#r1-6:checked~.menu>label[for="r1-5"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r1-6:checked~.menu>label[for="r1-7"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r1-7:checked~.maze>.player {
+  --x: 1;
+  --y: 7;
+}
+
+input#r1-7:checked~.menu>label[for="r0-7"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r1-7:checked~.menu>label[for="r1-6"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-0:checked~.maze>.player {
+  --x: 2;
+  --y: 0;
+}
+
+input#r2-0:checked~.menu>label[for="r3-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r2-0:checked~.menu>label[for="r2-1"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-1:checked~.maze>.player {
+  --x: 2;
+  --y: 1;
+}
+
+input#r2-1:checked~.menu>label[for="r2-0"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-1:checked~.menu>label[for="r2-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-2:checked~.maze>.player {
+  --x: 2;
+  --y: 2;
+}
+
+input#r2-2:checked~.menu>label[for="r1-2"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r2-2:checked~.menu>label[for="r3-2"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r2-2:checked~.menu>label[for="r2-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-2:checked~.menu>label[for="r2-3"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-3:checked~.maze>.player {
+  --x: 2;
+  --y: 3;
+}
+
+input#r2-3:checked~.menu>label[for="r2-2"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-3:checked~.menu>label[for="r2-4"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-4:checked~.maze>.player {
+  --x: 2;
+  --y: 4;
+}
+
+input#r2-4:checked~.menu>label[for="r1-4"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r2-4:checked~.menu>label[for="r2-3"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-5:checked~.maze>.player {
+  --x: 2;
+  --y: 5;
+}
+
+input#r2-5:checked~.menu>label[for="r3-5"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r2-5:checked~.menu>label[for="r2-6"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-6:checked~.maze>.player {
+  --x: 2;
+  --y: 6;
+}
+
+input#r2-6:checked~.menu>label[for="r2-5"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r2-6:checked~.menu>label[for="r2-7"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r2-7:checked~.maze>.player {
+  --x: 2;
+  --y: 7;
+}
+
+input#r2-7:checked~.menu>label[for="r3-7"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r2-7:checked~.menu>label[for="r2-6"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r3-0:checked~.maze>.player {
+  --x: 3;
+  --y: 0;
+}
+
+input#r3-0:checked~.menu>label[for="r2-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r3-0:checked~.menu>label[for="r4-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-1:checked~.maze>.player {
+  --x: 3;
+  --y: 1;
+}
+
+input#r3-1:checked~.menu>label[for="r4-1"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-1:checked~.menu>label[for="r3-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r3-2:checked~.maze>.player {
+  --x: 3;
+  --y: 2;
+}
+
+input#r3-2:checked~.menu>label[for="r2-2"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r3-2:checked~.menu>label[for="r3-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r3-3:checked~.maze>.player {
+  --x: 3;
+  --y: 3;
+}
+
+input#r3-3:checked~.menu>label[for="r4-3"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-3:checked~.menu>label[for="r3-4"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r3-4:checked~.maze>.player {
+  --x: 3;
+  --y: 4;
+}
+
+input#r3-4:checked~.menu>label[for="r4-4"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-4:checked~.menu>label[for="r3-3"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r3-5:checked~.maze>.player {
+  --x: 3;
+  --y: 5;
+}
+
+input#r3-5:checked~.menu>label[for="r2-5"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r3-5:checked~.menu>label[for="r4-5"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-6:checked~.maze>.player {
+  --x: 3;
+  --y: 6;
+}
+
+input#r3-6:checked~.menu>label[for="r4-6"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r3-6:checked~.menu>label[for="r3-7"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r3-7:checked~.maze>.player {
+  --x: 3;
+  --y: 7;
+}
+
+input#r3-7:checked~.menu>label[for="r2-7"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r3-7:checked~.menu>label[for="r3-6"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r4-0:checked~.maze>.player {
+  --x: 4;
+  --y: 0;
+}
+
+input#r4-0:checked~.menu>label[for="r3-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-0:checked~.menu>label[for="r5-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r4-1:checked~.maze>.player {
+  --x: 4;
+  --y: 1;
+}
+
+input#r4-1:checked~.menu>label[for="r3-1"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-1:checked~.menu>label[for="r5-1"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r4-2:checked~.maze>.player {
+  --x: 4;
+  --y: 2;
+}
+
+input#r4-2:checked~.menu>label[for="r5-2"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r4-3:checked~.maze>.player {
+  --x: 4;
+  --y: 3;
+}
+
+input#r4-3:checked~.menu>label[for="r3-3"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-3:checked~.menu>label[for="r5-3"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r4-4:checked~.maze>.player {
+  --x: 4;
+  --y: 4;
+}
+
+input#r4-4:checked~.menu>label[for="r3-4"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-4:checked~.menu>label[for="r4-5"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r4-5:checked~.maze>.player {
+  --x: 4;
+  --y: 5;
+}
+
+input#r4-5:checked~.menu>label[for="r3-5"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-5:checked~.menu>label[for="r4-4"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r4-6:checked~.maze>.player {
+  --x: 4;
+  --y: 6;
+}
+
+input#r4-6:checked~.menu>label[for="r3-6"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r4-6:checked~.menu>label[for="r5-6"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r4-7:checked~.maze>.player {
+  --x: 4;
+  --y: 7;
+}
+
+input#r4-7:checked~.menu>label[for="r5-7"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-0:checked~.maze>.player {
+  --x: 5;
+  --y: 0;
+}
+
+input#r5-0:checked~.menu>label[for="r4-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-0:checked~.menu>label[for="r6-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-1:checked~.maze>.player {
+  --x: 5;
+  --y: 1;
+}
+
+input#r5-1:checked~.menu>label[for="r4-1"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-1:checked~.menu>label[for="r5-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r5-2:checked~.maze>.player {
+  --x: 5;
+  --y: 2;
+}
+
+input#r5-2:checked~.menu>label[for="r4-2"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-2:checked~.menu>label[for="r5-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r5-3:checked~.maze>.player {
+  --x: 5;
+  --y: 3;
+}
+
+input#r5-3:checked~.menu>label[for="r4-3"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-3:checked~.menu>label[for="r6-3"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-4:checked~.maze>.player {
+  --x: 5;
+  --y: 4;
+}
+
+input#r5-4:checked~.menu>label[for="r6-4"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-4:checked~.menu>label[for="r5-5"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r5-5:checked~.maze>.player {
+  --x: 5;
+  --y: 5;
+}
+
+input#r5-5:checked~.menu>label[for="r6-5"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-5:checked~.menu>label[for="r5-4"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r5-6:checked~.maze>.player {
+  --x: 5;
+  --y: 6;
+}
+
+input#r5-6:checked~.menu>label[for="r4-6"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-6:checked~.menu>label[for="r5-7"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r5-7:checked~.maze>.player {
+  --x: 5;
+  --y: 7;
+}
+
+input#r5-7:checked~.menu>label[for="r4-7"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r5-7:checked~.menu>label[for="r6-7"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r5-7:checked~.menu>label[for="r5-6"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r6-0:checked~.maze>.player {
+  --x: 6;
+  --y: 0;
+}
+
+input#r6-0:checked~.menu>label[for="r5-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r6-0:checked~.menu>label[for="r7-0"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r6-0:checked~.menu>label[for="r6-1"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r6-1:checked~.maze>.player {
+  --x: 6;
+  --y: 1;
+}
+
+input#r6-1:checked~.menu>label[for="r7-1"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r6-1:checked~.menu>label[for="r6-0"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r6-1:checked~.menu>label[for="r6-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r6-2:checked~.maze>.player {
+  --x: 6;
+  --y: 2;
+}
+
+input#r6-2:checked~.menu>label[for="r6-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r6-2:checked~.menu>label[for="r6-3"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r6-3:checked~.maze>.player {
+  --x: 6;
+  --y: 3;
+}
+
+input#r6-3:checked~.menu>label[for="r5-3"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r6-3:checked~.menu>label[for="r6-2"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r6-4:checked~.maze>.player {
+  --x: 6;
+  --y: 4;
+}
+
+input#r6-4:checked~.menu>label[for="r5-4"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r6-4:checked~.menu>label[for="r7-4"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r6-5:checked~.maze>.player {
+  --x: 6;
+  --y: 5;
+}
+
+input#r6-5:checked~.menu>label[for="r5-5"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r6-5:checked~.menu>label[for="r7-5"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r6-6:checked~.maze>.player {
+  --x: 6;
+  --y: 6;
+}
+
+input#r6-6:checked~.menu>label[for="r7-6"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r6-7:checked~.maze>.player {
+  --x: 6;
+  --y: 7;
+}
+
+input#r6-7:checked~.menu>label[for="r5-7"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r6-7:checked~.menu>label[for="r7-7"] {
+  display: inline-block;
+  --r: 0deg;
+}
+
+input#r7-0:checked~.maze>.player {
+  --x: 7;
+  --y: 0;
+}
+
+input#r7-0:checked~.menu>label[for="r6-0"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r7-1:checked~.maze>.player {
+  --x: 7;
+  --y: 1;
+}
+
+input#r7-1:checked~.menu>label[for="r6-1"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r7-1:checked~.menu>label[for="r7-2"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r7-2:checked~.maze>.player {
+  --x: 7;
+  --y: 2;
+}
+
+input#r7-2:checked~.menu>label[for="r7-1"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r7-2:checked~.menu>label[for="r7-3"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r7-3:checked~.maze>.player {
+  --x: 7;
+  --y: 3;
+}
+
+input#r7-3:checked~.menu>label[for="r7-2"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r7-3:checked~.menu>label[for="r7-4"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r7-4:checked~.maze>.player {
+  --x: 7;
+  --y: 4;
+}
+
+input#r7-4:checked~.menu>label[for="r6-4"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r7-4:checked~.menu>label[for="r7-3"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r7-5:checked~.maze>.player {
+  --x: 7;
+  --y: 5;
+}
+
+input#r7-5:checked~.menu>label[for="r6-5"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r7-5:checked~.menu>label[for="r7-6"] {
+  display: inline-block;
+  --r: 90deg;
+}
+
+input#r7-6:checked~.maze>.player {
+  --x: 7;
+  --y: 6;
+}
+
+input#r7-6:checked~.menu>label[for="r6-6"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+input#r7-6:checked~.menu>label[for="r7-5"] {
+  display: inline-block;
+  --r: -90deg;
+}
+
+input#r7-7:checked~.maze>.player {
+  --x: 7;
+  --y: 7;
+}
+
+input#r7-7:checked~.menu>label[for="r6-7"] {
+  display: inline-block;
+  --r: 180deg;
+}
+
+.menu {
+  width: 7rem;
+  height: 7rem;
+  margin-block: 2rem;
+  outline: 0.1rem solid #ccc;
+  border-radius: 20%;
+  position: relative;
+  transition: opacity 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  --r: 0deg;
+  position: absolute;
+  transform: rotate(var(--r)) translateX(2rem);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: none;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  inset: 0rem;
+  background-color: #ccc;
+  clip-path: polygon(0% 30%, 50% 30%, 50% 0%, 100% 50%, 50% 100%, 50% 70%, 0% 70%);
+}
+
+label:hover::after {
+  background-color: white;
+}
+
+button {
+  background-color: #ccc;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-family: inherit;
+  font-size: 1.125rem;
+  color: black;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+button:focus {
+  outline-offset: 0.2rem;
+  outline: 0.1rem solid #ccc;
+}
+
+button:hover {
+  background-color: white;
+}
+
+input#r0-0:checked~button[type="reset"] {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.win {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+  transition: opacity 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input#r7-7:checked~.win {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+input#r7-7:checked~ :is(.menu, button[type="reset"]) {
+  opacity: 0;
+}
+
+.modal {
+  display: none;
+  /* Hide the modal by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  /* White background */
+  margin: 20% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  /* Max width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add some shadow for depth */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Center the text inside the modal */
+.modal-content h2,
+.modal-content p {
+  text-align: center;
+  /* Center text inside modal */
+}
+
+/* Close button style */
+.close-btn {
+  color: #aaa;
+  /* Light grey */
+  float: right;
+  /* Right-align the button */
+  font-size: 28px;
+  /* Font size */
+  font-weight: bold;
+  /* Bold */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  /* Change color on hover */
+  text-decoration: none;
+  /* Remove underline */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}

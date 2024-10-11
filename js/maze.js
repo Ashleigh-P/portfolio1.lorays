@@ -1,79 +1,78 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const maze = document.getElementById('maze');
-    const gridSize = 15; 
+    const gridSize = 15; // Grid size is 15x15
     const player = { x: 0, y: 0 }; // Player starts at the top-left corner
-    const center = { x: 7, y: 7 }; // Coordinates of the center
+    const finishPosition = { x: gridSize - 1, y: gridSize - 1 }; // Finish position at the bottom-right corner
+    let moveCount = 0; // Track player moves
+    const maxMoves = 27; // Maximum allowed moves for failure
 
-    // Function to generate a random number (0 or 1)
+    // Modal elements
+    const successModal = document.getElementById('successModal');
+    const failureModal = document.getElementById('failureModal');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const redirectBtn = document.getElementById('redirectBtn');
+    const retryBtn = document.getElementById('retryBtn');
+
+    // Create maze grid with walls and colors
+    const mazeBlocks = [];
+
+    function createBlock(x, y) {
+        const block = document.createElement('div');
+        block.classList.add('maze-block', getRandomColor());
+
+        // Determine if the block is a wall or path
+        if (isWall(x, y)) {
+            block.classList.add('wall');
+        }
+
+        return block;
+    }
+
     function getRandomColor() {
         return Math.random() > 0.5 ? 'color1' : 'color2';
     }
 
-    // Create maze grid with walls and colors
-    const mazeBlocks = [];
-    for (let y = 0; y < gridSize; y++) {
-        const row = [];
-        for (let x = 0; x < gridSize; x++) {
-            const block = document.createElement('div');
-            block.classList.add('maze-block');
-            block.classList.add(getRandomColor());
-
-            // Randomly assign some blocks as walls
-            if (Math.random() > 0.7 && (x !== player.x || y !== player.y) && !(x >= center.x && x <= center.x + 1 && y >= center.y && y <= center.y + 1)) {
-                block.classList.add('wall');
-            }
-
-            maze.appendChild(block);
-            row.push(block);
-        }
-        mazeBlocks.push(row);
+    function isWall(x, y) {
+        // Randomly place walls but ensure start and finish are clear
+        return (Math.random() > 0.5) && !(x === player.x && y === player.y) && !(x === finishPosition.x && y === finishPosition.y);
     }
 
-    // Create the player
+    function createMaze() {
+        for (let y = 0; y < gridSize; y++) {
+            const row = [];
+            for (let x = 0; x < gridSize; x++) {
+                const block = createBlock(x, y);
+                maze.appendChild(block);
+                row.push(block);
+            }
+            mazeBlocks.push(row);
+        }
+    }
+
+    // Create the player block
     const playerBlock = document.createElement('div');
     playerBlock.classList.add('maze-block', 'player');
     maze.appendChild(playerBlock);
     updatePlayerPosition();
 
-    // Create the center goal
-    const centerBlock = document.createElement('div');
-    centerBlock.classList.add('maze-center');
-
-    // Hide the video initially
-    const video = document.createElement('video');
-    video.src ='ashleigh-p.lorays.github.io/vids/Lo Rays - 27 Club (Visualiser).mp4' ;
-    video.controls = true;
-    video.style.display = 'none'; // Initially hidden
-    video.style.width = '100%';
-
-
-     // Fullscreen button
-     const fullScreenButton = document.createElement('button');
-     fullScreenButton.innerText = 'Full Screen';
-     fullScreenButton.style.display = 'none'; // Hidden until player reaches the center
- 
-     // Add video and button to the center
-     centerBlock.appendChild(video);
-     centerBlock.appendChild(fullScreenButton);
-     maze.appendChild(centerBlock);
-
-    // Handle keyboard movement
-    document.addEventListener('keydown', function(event) {
+    // Movement function
+    function movePlayer(direction) {
         let newX = player.x;
         let newY = player.y;
 
-        switch (event.key) {
+        // Update position based on direction
+        switch (direction) {
             case 'ArrowUp':
-                newY = player.y > 0 ? player.y - 1 : player.y;
+                newY = Math.max(0, player.y - 1);
                 break;
             case 'ArrowDown':
-                newY = player.y < gridSize - 1 ? player.y + 1 : player.y;
+                newY = Math.min(gridSize - 1, player.y + 1);
                 break;
             case 'ArrowLeft':
-                newX = player.x > 0 ? player.x - 1 : player.x;
+                newX = Math.max(0, player.x - 1);
                 break;
             case 'ArrowRight':
-                newX = player.x < gridSize - 1 ? player.x + 1 : player.x;
+                newX = Math.min(gridSize - 1, player.x + 1);
                 break;
         }
 
@@ -82,17 +81,59 @@ document.addEventListener('DOMContentLoaded', function() {
             player.x = newX;
             player.y = newY;
             updatePlayerPosition();
-        }
+            moveCount++; // Increment move count
 
-// Check if player reached the center
-if (player.x >= center.x && player.x <= center.x + 1 && player.y >= center.y && player.y <= center.y + 1) {
-    alert('Escape! Congratulations, Redirecting to YouTube... Enjoy!!! ');
-    window.location.href = 'https://www.youtube.com/watch?v=Gy9URC1SlS8'; // Replace with your YouTube video link
-}
-});
-    // Update the player block's position in the grid
-    function updatePlayerPosition() {
-        playerBlock.style.gridColumn = player.x + 1;
-        playerBlock.style.gridRow = player.y + 1;
+            // Check for failure condition
+            if (moveCount > maxMoves) {
+                failureModal.style.display = 'flex'; // Show failure modal
+                return;
+            }
+
+            // Check for success condition
+            if (player.x === finishPosition.x && player.y === finishPosition.y) {
+                successModal.style.display = 'flex'; // Show success modal
+            }
+        }
     }
+
+    // Handle keyboard movement
+    window.addEventListener('keydown', function (event) {
+        // Prevent arrow keys from scrolling the page
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+            event.preventDefault(); // Stop the default action
+            movePlayer(event.key); // Call the movement function
+        }
+    });
+
+    // Update the player's position in the grid
+    function updatePlayerPosition() {
+        playerBlock.style.gridColumn = player.x + 1; // Grid column is 1-based
+        playerBlock.style.gridRow = player.y + 1; // Grid row is 1-based
+    }
+
+    // Close modals
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            successModal.style.display = 'none';
+            failureModal.style.display = 'none';
+        });
+    });
+
+    // Redirect to YouTube (on success)
+    redirectBtn.addEventListener('click', function () {
+        window.location.href = 'https://www.youtube.com/watch?v=Gy9URC1SlS8'; // Replace with your YouTube link
+    });
+
+    // Retry the maze (on failure)
+    retryBtn.addEventListener('click', function () {
+        window.location.href = 'https://www.youtube.com/watch?v=z90_CpugQkI'; // Replace with your YouTube link
+        player.x = 0; // Reset player position to the start
+        player.y = 0; // Reset player position to the start
+        moveCount = 0; // Reset move counter
+        updatePlayerPosition(); // Update the player’s position on the grid
+        failureModal.style.display = 'none'; // Hide failure modal
+    });
+
+    // Initialize maze creation
+    createMaze();
 });
