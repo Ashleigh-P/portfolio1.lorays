@@ -1129,7 +1129,7 @@ input#r7-7:checked~ :is(.menu, button[type="reset"]) {
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 50%;
   /* Could be more or less, depending on screen size */
   max-width: 600px;
   /* Max width for larger screens */
