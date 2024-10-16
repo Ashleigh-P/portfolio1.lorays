@@ -55,8 +55,57 @@ retryBtn.addEventListener('click', () => {
 
 // Close modal if user clicks outside modal content
 window.onclick = function(event) {
-    if (event.target == successModal || event.target == failureModal) {
+    if (event.target == successModal) {
         successModal.style.display = 'none';
+    } else if (event.target == failureModal) {
         failureModal.style.display = 'none';
     }
-};
+}
+
+// Tour dates array
+const tourDates = [
+    {
+        date: '10-11-2024',
+        city: 'New York, NY',
+        venue: 'Madison Square Garden',
+        ticketLink: 'https://www.ticketmaster.com',
+    },
+    
+    {
+        date: '2024-12-05',
+        city: 'Los Angeles, CA',
+        venue: 'Hollywood Bowl',
+        ticketLink: 'https://www.ticketmaster.com',
+    },
+    {
+        date: '2025-01-22',
+        city: 'London, UK',
+        venue: 'O2 Arena',
+        ticketLink: 'https://www.ticketmaster.com',
+    }
+];
+
+// Function to render the tour dates dynamically
+function renderTourDates() {
+    const tourList = document.getElementById('tour-list');
+    
+    tourDates.forEach(show => {
+        const tourItem = document.createElement('li'); 
+        tourItem.classList.add('tour-item');
+
+        tourItem.innerHTML = `
+            <div class="tour-details">
+                <div class="tour-date">${show.date}</div>
+                <div class="tour-city">${show.city}</div>
+                <div class="tour-venue">${show.venue}</div>
+                <div>
+                    <a href="${show.ticketLink}" target="_blank" class="tour-ticket-link">Buy Tickets</a>
+                </div>
+            </div>
+        `; 
+        tourList.appendChild(tourItem);
+    });
+}
+
+// Call the function to render the tour dates
+renderTourDates();

@@ -5,12 +5,80 @@
     font-style: normal;
 }
 
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #333;
+}
+
 .constr {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     color: #00f2ff;
 
 }
+
+/*-----new-----*/
+#tour-section h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    color: #4df6ff;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    display: block;
+}
+
+ul#tour-list {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+    list-style-type: none;
+    padding: 0;
+    color: #c0dddc;
+    display: block;
+
+}
+
+.tour-item {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 25rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    line-height: 1.5;
+
+}
+
+.tour-date,
+.tour-city,
+.tour-venue {
+    margin: 5px 0;
+    font-size: 18px;
+    display: block;
+
+}
+
+.tour-ticket-link {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #47eaff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tour-ticket-link:hover {
+    background-color: #47cbff;
+    color: #000;
+}
+
+
+/*----new----*/
+
 
 /*-----------TEMP MAZE-------------------------*/
 .modal {
@@ -92,13 +160,6 @@ button#retryBtn:hover {
 }
 
 /*-----------------*/
-body {
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #333;
-}
 
 .maze-container {
     display: inline-block;
@@ -147,14 +208,6 @@ header {
     width: 100%;
 }
 
-.menu-btn {
-    color: #00f2ff;
-    display: none;
-    font-size: 1.7rem;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
-}
 
 .bg-img-container {
     position: fixed;
@@ -178,6 +231,7 @@ header {
     position: relative;
 }
 
+/*-- LOGO --*/
 .tour-head {
     max-width: 100%;
     margin: 0 auto;
@@ -191,6 +245,9 @@ header {
     margin-bottom: -1rem;
 }
 
+/*-- LOGO end--*/
+
+/*--footer text --*/
 p {
     color: white;
     font-family: "Orbitron", sans-serif;
@@ -210,8 +267,17 @@ p {
 
 }
 
+/*--footer text end --*/
 
-
+/*--- Nav Bar ---*/
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
 
 ul {
     font-family: "Orbitron", sans-serif;
@@ -293,6 +359,8 @@ ul {
     }
 }
 
+/*--- Nav Bar End ---*/
+
 .bg-img-tour {
     position: fixed;
     top: 0;
@@ -321,90 +389,6 @@ main {
     padding: 1rem;
 }
 
-.post {
-    color: rgb(255, 0, 0);
-    text-shadow:
-        -1px -1px 0 #ffffff,
-        1px -1px 0 #ffffff,
-        -1px 1px 0 #ffffff,
-        1px 1px 0 #ffffff;
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    margin-top: 0.5rem;
-}
-
-.tour-dates {
-    background-color: transparent;
-    padding: 0rem;
-    border-radius: 10px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.tour-dates h1 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    text-shadow: 3px 3px 6px rgb(251, 15, 251);
-}
-
-.tourdate-heading {
-    color: #fff;
-    text-shadow:
-        -1px -1px 0 #030303,
-        1px -1px 0 #0a0a0a,
-        -1px 1px 0 #000000,
-        1px 1px 0 #070707;
-    font-size: 2.5rem;
-    margin-top: -2rem;
-
-}
-
-.date {
-    color: rgb(255, 255, 255);
-    margin-bottom: 2rem;
-    padding: 1rem;
-
-}
-
-.date h3 {
-    margin: 0 0 0.5rem;
-    color: #cdf4ff;
-    text-shadow:
-        -1px -1px 0 #030303,
-        1px -1px 0 #0a0a0a,
-        -1px 1px 0 #000000,
-        1px 1px 0 #070707;
-    font-size: 1.9rem;
-}
-
-.date p {
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-}
-
-.date a {
-    font-family: "Orbitron", sans-serif;
-    display: block;
-    margin: 0.5rem auto;
-    width: 150px;
-    padding: 0.5rem 1rem;
-    color: #ffffff;
-    text-shadow: 2px 2px #000000;
-    background-color: #84d4f1;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.date a:hover {
-    background-color: #fd29eb;
-}
-
 #social-links {
     display: flex;
     align-items: center;
@@ -419,16 +403,15 @@ main {
     display: inline-block;
 }
 
-.check {
+/*--- responsive design below ---*/
 
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: #00ff99;
-}
+@media screen and (max-width:768px) {
 
-@media screen and (max-width:480px) {
+    .constr {
+        font-size: 2.5rem;
+    }
 
-
+    /*---nav bar ---*/
     .menu-btn {
         font-weight: bold;
         padding-top: 1.7rem;
@@ -486,15 +469,9 @@ main {
         text-align: left;
     }
 
+    /*---nav bar end ---*/
 
-    .tourdate-heading {
-        font-size: 1.5rem;
-    }
-
-    .date {
-        padding: 0.6rem;
-    }
-
+    /*--social links--*/
     #social-links {
         display: flex;
         align-items: center;
@@ -508,6 +485,8 @@ main {
         height: auto;
         display: inline-block;
     }
+
+    /*--social links end--*/
 
     .head-logo {
         margin-top: 1rem;
@@ -523,16 +502,6 @@ main {
     }
 
     .tourdate-heading {
-        font-size: 1rem;
-    }
-
-
-
-    .date {
-        padding: 0.5rem;
-    }
-
-    .post {
         font-size: 1rem;
     }
 
